@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2316161_bjit_e_0_attend</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>BJIT ERP - Detect Late Arrival</name>
+        <order>300</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[
+(function executeRule(current, previous) {
+    var checkIn = current.getValue('check_in');
+    if (!checkIn) return;
+
+    var configGr = new GlideRecord('x_2316161_bjit_e_0_att_cfg');
+    configGr.addQuery('active', true);
+    configGr.setLimit(1);
+    configGr.query();
+    if (!configGr.next()) return;
+
+    var workStart = configGr.getValue('work_start');
+    var gracePeriod = parseInt(configGr.getValue('grace_period') || '0', 10);
+
+    if (workStart) {
+        var startParts = workStart.split(':');
+        var inParts = checkIn.split(':');
+        var startMinutes = parseInt(startParts[0], 10) * 60 + parseInt(startParts[1], 10);
+        var inMinutes = parseInt(inParts[0], 10) * 60 + parseInt(inParts[1], 10);
+        current.setValue('is_late', inMinutes > (startMinutes + gracePeriod));
+    }
+})(current, previous);
+    ]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-16 04:46:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>91a0cf49a0be4ab9b571022979e045b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BJIT ERP - Detect Late Arrival</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_script_91a0cf49a0be4ab9b571022979e045b0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-16 04:46:43</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=91a0cf49a0be4ab9b571022979e045b0"/>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-16 04:46:45</sys_created_on>
+        <sys_id>426d6c040cd34bea80b7c74f3ca45354</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2316161_bjit_e_0_att_corr.approval_date.x_2316161_bjit_e_0.erp_admin</sys_name>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_security_acl display_value="x_2316161_bjit_e_0_att_corr.approval_date">d48bfac82c8f4b45824333ab9b58e3e4</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_426d6c040cd34bea80b7c74f3ca45354</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-16 04:46:45</sys_updated_on>
+        <sys_user_role display_value="x_2316161_bjit_e_0.erp_admin" name="x_2316161_bjit_e_0.erp_admin">ea347d5de52d4ca08315fe5bba8917cc</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

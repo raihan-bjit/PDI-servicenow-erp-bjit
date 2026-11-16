@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-16 04:46:47</sys_created_on>
+        <sys_id>f2da7e6837964b43aad945c19dc90250</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2316161_bjit_e_0_holiday.x_2316161_bjit_e_0.hr_admin</sys_name>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_security_acl display_value="x_2316161_bjit_e_0_holiday">4b0c2360398b45a8905da44c7d6e6e52</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_f2da7e6837964b43aad945c19dc90250</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-16 04:46:47</sys_updated_on>
+        <sys_user_role display_value="x_2316161_bjit_e_0.hr_admin" name="x_2316161_bjit_e_0.hr_admin">9d4c830dabc24f89b3e247bc23e7f3c6</sys_user_role>
+    </sys_security_acl_role>
+</record_update>
