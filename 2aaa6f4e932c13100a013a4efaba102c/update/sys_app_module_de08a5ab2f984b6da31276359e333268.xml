@@ -5,18 +5,18 @@
         <assessment/>
         <device_type/>
         <filter/>
-        <hint>View your leave balances</hint>
+        <hint>View leave statistics and balances</hint>
         <homepage/>
         <image/>
         <karuna_route/>
-        <link_type>LIST</link_type>
+        <link_type>DIRECT</link_type>
         <map_page/>
         <mobile_title/>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>x_2316161_bjit_e_0_lv_bal</name>
         <order>1300</order>
         <override_menu_roles>false</override_menu_roles>
-        <query>employee.user=javascript:gs.getUserID()^active=true</query>
+        <query>x_2316161_bjit_e_0_dashboard.do?page=leave</query>
         <report/>
         <require_confirmation>true</require_confirmation>
         <roles>x_2316161_bjit_e_0.employee</roles>
@@ -38,7 +38,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-11-16 04:59:34</sys_updated_on>
         <timeline_page/>
-        <title>My Leave Balance</title>
+        <title>Leave Overview</title>
         <uncancelable>false</uncancelable>
         <ux_list/>
         <view_name/>

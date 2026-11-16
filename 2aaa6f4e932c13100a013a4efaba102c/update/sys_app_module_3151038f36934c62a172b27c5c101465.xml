@@ -16,7 +16,7 @@
         <name/>
         <order>50</order>
         <override_menu_roles>false</override_menu_roles>
-        <query>x_2316161_bjit_e_0_dashboard.do</query>
+        <query>x_2316161_bjit_e_0_dashboard.do?page=dashboard</query>
         <report/>
         <require_confirmation>true</require_confirmation>
         <roles>x_2316161_bjit_e_0.employee</roles>

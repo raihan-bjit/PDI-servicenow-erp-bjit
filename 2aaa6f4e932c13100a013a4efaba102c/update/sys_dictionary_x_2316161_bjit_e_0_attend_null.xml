@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_2316161_bjit_e_0_attend">
         <active>true</active>
         <array>false</array>
-        <attributes>enforce_dot_walk_cross_scope_access=true</attributes>
+        <attributes/>
         <audit>true</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -58,7 +58,7 @@
         <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
         <sys_policy/>
         <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
-        <sys_update_name>sys_dictionary_x_2316161_bjit_e_0_attend_null</sys_update_name>
+        <sys_update_name>sys_dictionary_x_2316161_bjit_e_0_attend_NULL</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2026-11-16 04:46:36</sys_updated_on>
         <table_reference>false</table_reference>
