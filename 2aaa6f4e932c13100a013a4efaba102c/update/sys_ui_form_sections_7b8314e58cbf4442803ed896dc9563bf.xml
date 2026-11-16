@@ -3,30 +3,30 @@
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:42</sys_created_on>
+            <sys_created_on>2026-11-16 06:43:18</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>476421b16d7748d283906e0e4bf6c5e1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_2316161_bjit_e_0_lv_bal" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">7b8314e58cbf4442803ed896dc9563bf</sys_ui_form>
-            <sys_ui_section display_value="">5b3b25c0f6ca48cb9ca5372873bf1df5</sys_ui_section>
+            <sys_ui_section caption="Balance Details" display_value="Balance Details" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">5b3b25c0f6ca48cb9ca5372873bf1df5</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:42</sys_updated_on>
+            <sys_updated_on>2026-11-16 06:43:18</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:42</sys_created_on>
+            <sys_created_on>2026-11-16 06:43:18</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>25e6231f541047e2aaecdce64e908d8c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_2316161_bjit_e_0_lv_bal" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">7b8314e58cbf4442803ed896dc9563bf</sys_ui_form>
-            <sys_ui_section display_value="">3843ac09c7a94c958ec1f14de59d238d</sys_ui_section>
+            <sys_ui_section caption="Usage" display_value="Usage" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">3843ac09c7a94c958ec1f14de59d238d</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:42</sys_updated_on>
+            <sys_updated_on>2026-11-16 06:43:18</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_2316161_bjit_e_0_lv_bal</name>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>read</operation>
+        <source_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-16 05:16:11</sys_created_on>
+        <sys_id>c64affce93ac13100a013a4efaba102a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cmn_department</sys_name>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_scope_privilege_c64affce93ac13100a013a4efaba102a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-16 05:16:11</sys_updated_on>
+        <target_name>cmn_department</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+</record_update>

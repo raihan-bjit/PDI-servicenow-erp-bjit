@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="2a91d576c4f24a959cc526ae9331fec6" label="Leave Balance" name="x_2316161_bjit_e_0_lv_bal" type="collection">
+        <element default="true" label="Active" name="active" type="boolean"/>
+        <element attributes="scale=1" default="0" label="Pending Approval Days" name="pending_days" read_only="true" read_only_option="instance_configured" type="decimal"/>
+        <element attributes="scale=1" default="0" label="Entitled Days" name="entitled_days" type="decimal"/>
+        <element default="javascript:new GlideDateTime().getYearLocalTime();" label="Year" mandatory="true" name="year" type="integer"/>
+        <element attributes="scale=1" default="0" label="Used Days" name="used_days" read_only="true" read_only_option="instance_configured" type="decimal"/>
+        <element attributes="scale=1" default="0" label="Carried Forward Days" name="carried_days" type="decimal"/>
+        <element attributes="scale=1" default="0" label="Remaining Days" name="remaining_days" read_only="true" read_only_option="instance_configured" type="decimal"/>
+        <element label="Leave Type" mandatory="true" name="leave_type" reference="x_2316161_bjit_e_0_lv_type" type="reference"/>
+        <element display="true" label="Employee" mandatory="true" name="employee" reference="x_2316161_bjit_e_0_emp" type="reference"/>
+        <index name="index" unique="true">
+            <element name="employee"/>
+            <element name="leave_type"/>
+            <element name="year"/>
+        </index>
+        <index name="index2">
+            <element name="leave_type"/>
+        </index>
+    </element>
+</database>

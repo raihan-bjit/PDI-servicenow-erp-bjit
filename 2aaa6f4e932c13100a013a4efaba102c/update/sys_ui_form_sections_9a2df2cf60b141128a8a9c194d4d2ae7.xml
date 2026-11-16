@@ -3,58 +3,58 @@
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:42</sys_created_on>
+            <sys_created_on>2026-11-16 06:43:18</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>e3de31bbaadf4382b88bcf719fd8b213</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_2316161_bjit_e_0_lv_app" name="x_2316161_bjit_e_0_lv_app" sys_domain="global" view="Default view">9a2df2cf60b141128a8a9c194d4d2ae7</sys_ui_form>
-            <sys_ui_section display_value="">93e898b04ca74af8a1da40bf08bda5ff</sys_ui_section>
+            <sys_ui_section caption="Leave Request" display_value="Leave Request" name="x_2316161_bjit_e_0_lv_app" sys_domain="global" view="Default view">93e898b04ca74af8a1da40bf08bda5ff</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:42</sys_updated_on>
+            <sys_updated_on>2026-11-16 06:43:18</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:42</sys_created_on>
+            <sys_created_on>2026-11-16 06:43:18</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>da3c621a093a4e93b7b63e9ccdab160c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_2316161_bjit_e_0_lv_app" name="x_2316161_bjit_e_0_lv_app" sys_domain="global" view="Default view">9a2df2cf60b141128a8a9c194d4d2ae7</sys_ui_form>
-            <sys_ui_section display_value="">9062a7e312164b5caf06deac8a0228ad</sys_ui_section>
+            <sys_ui_section caption="Approval" display_value="Approval" name="x_2316161_bjit_e_0_lv_app" sys_domain="global" view="Default view">9062a7e312164b5caf06deac8a0228ad</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:42</sys_updated_on>
+            <sys_updated_on>2026-11-16 06:43:18</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:42</sys_created_on>
+            <sys_created_on>2026-11-16 06:43:18</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>0571ee79244b4bf69cf3a6e23e7c3d6a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_2316161_bjit_e_0_lv_app" name="x_2316161_bjit_e_0_lv_app" sys_domain="global" view="Default view">9a2df2cf60b141128a8a9c194d4d2ae7</sys_ui_form>
-            <sys_ui_section display_value="">6b966ef225d54ad3b0f933ca1106ada2</sys_ui_section>
+            <sys_ui_section caption="HR Review" display_value="HR Review" name="x_2316161_bjit_e_0_lv_app" sys_domain="global" view="Default view">6b966ef225d54ad3b0f933ca1106ada2</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:42</sys_updated_on>
+            <sys_updated_on>2026-11-16 06:43:18</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:42</sys_created_on>
+            <sys_created_on>2026-11-16 06:43:18</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>6cf2abad850349dd8d32b60c3aee719e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_2316161_bjit_e_0_lv_app" name="x_2316161_bjit_e_0_lv_app" sys_domain="global" view="Default view">9a2df2cf60b141128a8a9c194d4d2ae7</sys_ui_form>
-            <sys_ui_section display_value="">f46a51ea2b8d470bbdffe1580a496f22</sys_ui_section>
+            <sys_ui_section caption="Notes" display_value="Notes" name="x_2316161_bjit_e_0_lv_app" sys_domain="global" view="Default view">f46a51ea2b8d470bbdffe1580a496f22</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:42</sys_updated_on>
+            <sys_updated_on>2026-11-16 06:43:18</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_2316161_bjit_e_0_lv_app</name>

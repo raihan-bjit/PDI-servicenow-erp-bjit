@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="b76de0f5ca034a228caeda1d8d48a1e5" label="Employee Profile" name="x_2316161_bjit_e_0_emp" type="collection">
+        <element default="active" label="Employment Status" mandatory="true" name="employment_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Suspended" sequence="3" value="suspended"/>
+                <element inactive_on_update="false" label="On Leave" sequence="2" value="on_leave"/>
+                <element inactive_on_update="false" label="Active" sequence="1" value="active"/>
+                <element inactive_on_update="false" label="Terminated" sequence="4" value="terminated"/>
+                <element inactive_on_update="false" label="Retired" sequence="6" value="retired"/>
+                <element inactive_on_update="false" label="Resigned" sequence="5" value="resigned"/>
+            </choice>
+        </element>
+        <element label="Joining Date" mandatory="true" name="joining_date" type="glide_date"/>
+        <element label="Blood Group" name="blood_group" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="O-" sequence="8" value="o_neg"/>
+                <element inactive_on_update="false" label="O+" sequence="7" value="o_pos"/>
+                <element inactive_on_update="false" label="A-" sequence="2" value="a_neg"/>
+                <element inactive_on_update="false" label="AB-" sequence="6" value="ab_neg"/>
+                <element inactive_on_update="false" label="B-" sequence="4" value="b_neg"/>
+                <element inactive_on_update="false" label="B+" sequence="3" value="b_pos"/>
+                <element inactive_on_update="false" label="AB+" sequence="5" value="ab_pos"/>
+                <element inactive_on_update="false" label="A+" sequence="1" value="a_pos"/>
+            </choice>
+        </element>
+        <element label="Emergency Contact Name" max_length="100" name="emergency_contact" type="string"/>
+        <element label="Date of Birth" name="date_of_birth" type="glide_date"/>
+        <element label="Emergency Contact Relationship" max_length="60" name="emergency_relation" type="string"/>
+        <element default="javascript:global.getNextObjNumberPadded();" display="true" label="Employee Number" mandatory="true" max_length="40" name="number" type="string"/>
+        <element label="Marital Status" name="marital_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Married" sequence="2" value="married"/>
+                <element inactive_on_update="false" label="Widowed" sequence="4" value="widowed"/>
+                <element inactive_on_update="false" label="Divorced" sequence="3" value="divorced"/>
+                <element inactive_on_update="false" label="Single" sequence="1" value="single"/>
+            </choice>
+        </element>
+        <element label="User Account" mandatory="true" name="user" reference="sys_user" type="reference"/>
+        <element label="National ID" max_length="40" name="national_id" type="string"/>
+        <element label="Termination Date" name="termination_date" type="glide_date"/>
+        <element label="Confirmation Date" name="confirmation_date" type="glide_date"/>
+        <element label="Employment Type" mandatory="true" name="employment_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Part-Time" sequence="2" value="part_time"/>
+                <element inactive_on_update="false" label="Probation" sequence="5" value="probation"/>
+                <element inactive_on_update="false" label="Contract" sequence="3" value="contract"/>
+                <element inactive_on_update="false" label="Full-Time" sequence="1" value="full_time"/>
+                <element inactive_on_update="false" label="Intern" sequence="4" value="intern"/>
+            </choice>
+        </element>
+        <element label="Personal Email" name="personal_email" type="email"/>
+        <element label="Designation" name="designation" reference="x_2316161_bjit_e_0_desgn" type="reference"/>
+        <element label="Emergency Contact Phone" max_length="40" name="emergency_phone" type="string"/>
+        <element label="Notes" name="notes" type="journal_input"/>
+        <index name="index">
+            <element name="designation"/>
+        </index>
+        <index name="index2" unique="true">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

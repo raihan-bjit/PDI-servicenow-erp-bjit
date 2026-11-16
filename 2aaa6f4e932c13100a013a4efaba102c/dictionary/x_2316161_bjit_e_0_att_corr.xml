@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="29788c834ece4bd58905d0f057baa277" label="Attendance Correction" name="x_2316161_bjit_e_0_att_corr" type="collection">
+        <element default="pending" label="Correction Status" mandatory="true" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
+            </choice>
+        </element>
+        <element label="Approval Date" name="approval_date" read_only="true" read_only_option="instance_configured" type="glide_date_time"/>
+        <element label="Reason" mandatory="true" max_length="1000" name="reason" type="string"/>
+        <element label="Requested Check-In" name="req_check_in" type="glide_time"/>
+        <element label="Employee" mandatory="true" name="employee" reference="x_2316161_bjit_e_0_emp" type="reference"/>
+        <element label="Work Notes" name="work_notes" type="journal_input"/>
+        <element label="Reviewer Notes" max_length="1000" name="reviewer_notes" type="string"/>
+        <element label="Approver" name="approver" reference="sys_user" type="reference"/>
+        <element label="Attendance Record" mandatory="true" name="attendance" reference="x_2316161_bjit_e_0_attend" type="reference"/>
+        <element label="Requested Check-Out" name="req_check_out" type="glide_time"/>
+        <element default="javascript:global.getNextObjNumberPadded();" display="true" label="Correction Number" mandatory="true" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="approver"/>
+        </index>
+        <index name="index2">
+            <element name="attendance"/>
+        </index>
+        <index name="index3">
+            <element name="employee"/>
+        </index>
+    </element>
+</database>

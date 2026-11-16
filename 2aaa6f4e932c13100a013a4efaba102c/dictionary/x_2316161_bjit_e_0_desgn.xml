@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="4fab65ceec3541698c386be216c8cce6" label="Designation" name="x_2316161_bjit_e_0_desgn" type="collection">
+        <element default="true" label="Active" name="active" type="boolean"/>
+        <element label="Level" name="level" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Principal" sequence="5" value="principal"/>
+                <element inactive_on_update="false" label="Senior" sequence="3" value="senior"/>
+                <element inactive_on_update="false" label="Junior" sequence="1" value="junior"/>
+                <element inactive_on_update="false" label="Executive" sequence="6" value="executive"/>
+                <element inactive_on_update="false" label="Mid-Level" sequence="2" value="mid"/>
+                <element inactive_on_update="false" label="Lead" sequence="4" value="lead"/>
+            </choice>
+        </element>
+        <element display="true" label="Designation Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element label="Description" max_length="500" name="description" type="string"/>
+        <element label="Department" name="department" reference="cmn_department" type="reference"/>
+        <index name="index">
+            <element name="department"/>
+        </index>
+    </element>
+</database>

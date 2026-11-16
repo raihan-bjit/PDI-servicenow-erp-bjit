@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_2316161_bjit_e_0.employee" name="x_2316161_bjit_e_0.employee">df152f3ed83f4f98a22907d096162405</contains>
+        <role display_value="x_2316161_bjit_e_0.executive" name="x_2316161_bjit_e_0.executive">e6efea1818b34306b30c18a92e64da8a</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-16 04:34:19</sys_created_on>
+        <sys_id>988785ad59df4ba0b6db6d3d632e5bc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2316161_bjit_e_0.employee.x_2316161_bjit_e_0.executive</sys_name>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_user_role_contains_988785ad59df4ba0b6db6d3d632e5bc3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-16 04:34:19</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

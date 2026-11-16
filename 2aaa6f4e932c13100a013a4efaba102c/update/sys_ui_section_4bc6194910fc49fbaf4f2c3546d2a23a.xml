@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Employee Information" section_id="4bc6194910fc49fbaf4f2c3546d2a23a" sys_domain="global" table="x_2316161_bjit_e_0_emp" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>4a608e67390d4b9097e00130ba7e7784</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>36e19b6849924d99ae4b2eefaad2711c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>user</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>4920569694c7413fb0bba8efd84470c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>626b33a96b754e7a9c18db8223a098f8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>employment_type</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>daff6afa6a3a44a0b3ab6cfde714f3e6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>employment_status</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>a4c80326528d407cb18823778b098dfe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>33cad1ddba934b1faab7e6c589e9858e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>1b5e0bd797ac402fabfad9d94260ec0c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>joining_date</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>074380363c8c4b8389e900a58bf4ae56</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>designation</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>5ebe83ffe4434672b654bd655399997b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>1f1934336b13476eb8f98e79a0e815eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>confirmation_date</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>c20bf0ac8ef04b0794ed0d833de90c37</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>termination_date</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>8a7b2a1d20b2457bb0c36e0c74fd64d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 06:43:22</sys_created_on>
+            <sys_id>3ce78777e33b4b079a3c23a2b0e2f44b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Employee Information" display_value="Employee Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">4bc6194910fc49fbaf4f2c3546d2a23a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 06:43:22</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Employee Information</caption>
+            <header>false</header>
+            <name>x_2316161_bjit_e_0_emp</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 04:34:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4bc6194910fc49fbaf4f2c3546d2a23a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2316161_bjit_e_0_emp</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+            <sys_update_name>sys_ui_section_4bc6194910fc49fbaf4f2c3546d2a23a</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 04:34:17</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>
