@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="86d78a1ed93b42bcab6c8c1076e0b93d" sys_domain="global" table="x_2316161_bjit_e_0_punch" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 08:54:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>33b372098ae14fb59291c6a166185bc8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_2316161_bjit_e_0_punch" name="x_2316161_bjit_e_0_punch" sys_domain="global" view="Default view">86d78a1ed93b42bcab6c8c1076e0b93d</sys_ui_form>
+            <sys_ui_section caption="Punch Details" display_value="Punch Details" name="x_2316161_bjit_e_0_punch" sys_domain="global" view="Default view">a507a45576234fa2b4e86188cf2b473e</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 08:54:32</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_2316161_bjit_e_0_punch</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 08:54:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>86d78a1ed93b42bcab6c8c1076e0b93d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2316161_bjit_e_0_punch</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+            <sys_update_name>sys_ui_form_sections_86d78a1ed93b42bcab6c8c1076e0b93d</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 08:54:32</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

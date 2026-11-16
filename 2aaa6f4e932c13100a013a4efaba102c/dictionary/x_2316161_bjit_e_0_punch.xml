@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="cb18fb029d4449ed8db5fc5a708168dc" label="Punch Event" name="x_2316161_bjit_e_0_punch" type="collection">
+        <element default="virtual" label="Source" name="source" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Virtual Punch" sequence="1" value="virtual"/>
+                <element inactive_on_update="false" label="Manual" sequence="2" value="manual"/>
+                <element inactive_on_update="false" label="System" sequence="3" value="system"/>
+            </choice>
+        </element>
+        <element label="Punch Date" mandatory="true" name="date" type="glide_date"/>
+        <element default="javascript:global.getNextObjNumberPadded();" display="true" label="Punch Number" mandatory="true" max_length="40" name="number" type="string"/>
+        <element label="Daily Attendance" name="attendance" reference="x_2316161_bjit_e_0_attend" type="reference"/>
+        <element label="Employee" mandatory="true" name="employee" reference="x_2316161_bjit_e_0_emp" type="reference"/>
+        <element label="Punch Time" mandatory="true" name="timestamp" type="glide_date_time"/>
+        <element label="Punch Type" mandatory="true" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="OUT" sequence="2" value="out"/>
+                <element inactive_on_update="false" label="IN" sequence="1" value="in"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="attendance"/>
+        </index>
+        <index name="index2">
+            <element name="employee"/>
+        </index>
+    </element>
+</database>
