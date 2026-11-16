@@ -6,6 +6,7 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2026-11-16 08:54:26</sys_created_on>
+            <sys_id>1e98a3b6fa69464992f295bcdc14f055</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>source</sys_name>
             <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
@@ -29,6 +30,7 @@
             <sys_created_on>2026-11-16 08:54:26</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>503b7b7b08834442baba6654c410968a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-11-16 08:54:26</sys_updated_on>
@@ -48,6 +50,7 @@
             <sys_created_on>2026-11-16 08:54:26</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>8deac7313aa446abadc0009521c6a04e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-11-16 08:54:26</sys_updated_on>
@@ -67,6 +70,7 @@
             <sys_created_on>2026-11-16 08:54:26</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>e218c016854e45c0a36bdf578801f712</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
             <sys_updated_on>2026-11-16 08:54:26</sys_updated_on>

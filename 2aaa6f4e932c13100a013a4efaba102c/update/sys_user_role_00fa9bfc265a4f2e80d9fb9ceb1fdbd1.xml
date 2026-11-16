@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>BJIT Manager - team oversight, approvals, and team reports</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>Sg7v5jIa35hBfXZCut3rzK2jkkPCBRdciz795R3MWDk=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_2316161_bjit_e_0.manager</name>

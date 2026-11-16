@@ -6,6 +6,7 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2026-11-16 04:46:42</sys_created_on>
+            <sys_id>090a48fe55d242e88abbda50173d6201</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>source</sys_name>
             <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
@@ -26,12 +27,13 @@
             <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:11</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:24</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>4777c6b059fc406d94f2160cec2a014b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:11</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:24</sys_updated_on>
             <value>manual</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -45,12 +47,13 @@
             <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:24</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>afe8d5effdd44dfd8e8493c1e09c317e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:24</sys_updated_on>
             <value>system</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -64,12 +67,13 @@
             <sequence>3</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:24</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>d6af55ce7c6d4ca2bdf76dc1bb2abcdc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:24</sys_updated_on>
             <value>import</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -83,12 +87,13 @@
             <sequence>4</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:24</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>2502ecb97f4b4f67b56da5215b9d5c70</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:24</sys_updated_on>
             <value>correction</value>
         </sys_choice>
     </sys_choice>

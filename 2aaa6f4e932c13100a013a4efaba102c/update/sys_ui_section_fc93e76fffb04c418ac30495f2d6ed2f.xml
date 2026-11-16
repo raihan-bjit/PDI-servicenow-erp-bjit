@@ -4,13 +4,13 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:48</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>56d93c5b26224543afc359f0f20c18b3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Approval Settings" display_value="Approval Settings" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">fc93e76fffb04c418ac30495f2d6ed2f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:48</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>requires_approval</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:48</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>6628668b3b9c42109c61405a88b5912b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Approval Settings" display_value="Approval Settings" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">fc93e76fffb04c418ac30495f2d6ed2f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:48</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>requires_hr</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:48</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>b1f73563e9d64ff2a78c14e39eace039</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Approval Settings" display_value="Approval Settings" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">fc93e76fffb04c418ac30495f2d6ed2f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:48</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>.split</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:48</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>09d8debdb42d48d680fa9bacf7dfc036</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Approval Settings" display_value="Approval Settings" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">fc93e76fffb04c418ac30495f2d6ed2f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:48</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>requires_doc</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:48</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>df87121ae3264802a27342fa6d54ae18</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Approval Settings" display_value="Approval Settings" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">fc93e76fffb04c418ac30495f2d6ed2f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:48</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>.end_split</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:48</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>c9b10401a8f447a2b056a50e52cc4987</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Approval Settings" display_value="Approval Settings" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">fc93e76fffb04c418ac30495f2d6ed2f</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:48</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>

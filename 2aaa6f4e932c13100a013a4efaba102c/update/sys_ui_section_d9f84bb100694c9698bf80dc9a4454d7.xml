@@ -4,13 +4,13 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>0264de2d8b17459a8d0f0779b41ad2d8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>name</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>5eeaddbdbc364a918cc8b3c182828950</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>paid</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>36c855ce4fd14883be155ef9150fc045</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>description</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>fe5ade7d480a453c8023a6044510b57c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>.split</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>355f374c3e174816ab8efd599702ccd7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>active</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>4115829b874c45168ecba97bf2e433ad</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>accrual_type</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>8fccc17970e345f097fc25b5ddf03ae6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>.end_split</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>b5710b13bc26461c9aa649cb4586430b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>.begin_split</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>94d9703c78904f45b31516c0859f3936</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -130,13 +130,13 @@
             <element>effective_from</element>
             <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>9fc50362acc242ea9a6d2ad68727751c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -144,13 +144,13 @@
             <element>.split</element>
             <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>ef7cd63c70d84f26852981209fcaca63</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -158,13 +158,13 @@
             <element>effective_to</element>
             <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>8ca6e451993249e380c47a74639c115e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -172,13 +172,13 @@
             <element>.end_split</element>
             <position>12</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:47</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:39</sys_created_on>
             <sys_id>f98f02f50403485ba34cfe53bda9cb35</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Leave Type Details" display_value="Leave Type Details" name="x_2316161_bjit_e_0_lv_type" sys_domain="global" view="Default view">d9f84bb100694c9698bf80dc9a4454d7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:47</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:39</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>

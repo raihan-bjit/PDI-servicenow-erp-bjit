@@ -6,6 +6,7 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2026-11-16 04:34:14</sys_created_on>
+            <sys_id>2b84641e898d467092f846c469434637</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>marital_status</sys_name>
             <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
@@ -26,12 +27,13 @@
             <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>b2baa1bb3d344b78a5dbc9711865a190</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>single</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -45,12 +47,13 @@
             <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>221bf2e0f9834440b0e27b4ca7ceaea2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>married</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -64,12 +67,13 @@
             <sequence>3</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>79aeedacafc0453ebdb01763ba45459f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>divorced</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -83,12 +87,13 @@
             <sequence>4</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>2e31106d4b704127be39d20491dafc2b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>widowed</value>
         </sys_choice>
     </sys_choice>

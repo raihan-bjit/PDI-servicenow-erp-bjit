@@ -3,7 +3,7 @@
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:18</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:32</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>bc57c80cc00e4f0083ef5d23cf63e943</sys_id>
@@ -12,7 +12,7 @@
             <sys_ui_form display_value="x_2316161_bjit_e_0_desgn" name="x_2316161_bjit_e_0_desgn" sys_domain="global" view="Default view">bb103e7621344bd0970851bcab1eba45</sys_ui_form>
             <sys_ui_section caption="Designation" display_value="Designation" name="x_2316161_bjit_e_0_desgn" sys_domain="global" view="Default view">5f51a85e8a1f4df68fb4c1263fbfb8c7</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:18</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:32</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_2316161_bjit_e_0_desgn</name>

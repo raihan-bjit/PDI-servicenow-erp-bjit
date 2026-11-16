@@ -6,6 +6,7 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2026-11-16 04:34:14</sys_created_on>
+            <sys_id>1f823ac65cd04717ae9683c89dbff066</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>employment_status</sys_name>
             <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
@@ -26,12 +27,13 @@
             <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>531d1e6d113943498b63809e9ddabc39</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>active</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -45,12 +47,13 @@
             <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>4a41692ab7c4485fbbb6149620983773</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>on_leave</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -64,12 +67,13 @@
             <sequence>3</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>145682b2f1bd4bd180698457aee1de9a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>suspended</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -83,12 +87,13 @@
             <sequence>4</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>5ddeeaf704cf46b8a8d0cc2cbf095f0e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>terminated</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -102,12 +107,13 @@
             <sequence>5</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>c0ff9268efdb4347b396aa134b2aadad</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>resigned</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -121,12 +127,13 @@
             <sequence>6</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>bf15a53b4d1a40738f1172982289d899</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>retired</value>
         </sys_choice>
     </sys_choice>

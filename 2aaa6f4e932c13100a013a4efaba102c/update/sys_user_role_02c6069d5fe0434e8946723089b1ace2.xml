@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>BJIT Asset Manager - asset registration, assignment, tracking, and lifecycle management</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>fhS6tsKN5roMA32oBnsAslI4Uwtlce5jYIHS/PazoYY=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_2316161_bjit_e_0.asset_mgr</name>

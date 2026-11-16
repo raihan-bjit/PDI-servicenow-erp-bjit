@@ -6,6 +6,7 @@
             <sys_class_name>sys_choice_set</sys_class_name>
             <sys_created_by>admin</sys_created_by>
             <sys_created_on>2026-11-16 04:46:43</sys_created_on>
+            <sys_id>5f5058a0390540fea04b2109c2959276</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>type</sys_name>
             <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
@@ -26,12 +27,13 @@
             <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>001819dad7a04db6bef892d0a61e1e8b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>public</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -45,12 +47,13 @@
             <sequence>2</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>edc768d2aa8c44708fdf12452e87d9b3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>company</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -64,12 +67,13 @@
             <sequence>3</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:12</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:25</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
+            <sys_id>6196dc1926544328a474398d64322be6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:12</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:25</sys_updated_on>
             <value>optional</value>
         </sys_choice>
     </sys_choice>
