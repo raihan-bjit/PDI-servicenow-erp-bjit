@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_2316161_bjit_e_0_lv_app" version="2" view="x_2316161_bjit_e_0_hr_leave">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_2316161_bjit_e_0_lv_app" element="NULL" name="x_2316161_bjit_e_0_lv_app" parent="NULL" relationship="NULL" sys_domain="global" view="4045675bdf05468999f1b6296cf6bd43">5a1c61db6d9f4053a424309de776896a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 04:59:44</sys_created_on>
+            <sys_id>327864a807644a0a8a7592482c4e9b50</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 04:59:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>employee</element>
+            <list_id display_value="x_2316161_bjit_e_0_lv_app" element="NULL" name="x_2316161_bjit_e_0_lv_app" parent="NULL" relationship="NULL" sys_domain="global" view="4045675bdf05468999f1b6296cf6bd43">5a1c61db6d9f4053a424309de776896a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 04:59:44</sys_created_on>
+            <sys_id>baeb89965512419e99339ae8cfe4e431</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 04:59:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>leave_type</element>
+            <list_id display_value="x_2316161_bjit_e_0_lv_app" element="NULL" name="x_2316161_bjit_e_0_lv_app" parent="NULL" relationship="NULL" sys_domain="global" view="4045675bdf05468999f1b6296cf6bd43">5a1c61db6d9f4053a424309de776896a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 04:59:44</sys_created_on>
+            <sys_id>71a72fca794a4381a91bc0afbc911825</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 04:59:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>start_date</element>
+            <list_id display_value="x_2316161_bjit_e_0_lv_app" element="NULL" name="x_2316161_bjit_e_0_lv_app" parent="NULL" relationship="NULL" sys_domain="global" view="4045675bdf05468999f1b6296cf6bd43">5a1c61db6d9f4053a424309de776896a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 04:59:44</sys_created_on>
+            <sys_id>7fa3f5d3d87a4560a970b400596f2968</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 04:59:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>end_date</element>
+            <list_id display_value="x_2316161_bjit_e_0_lv_app" element="NULL" name="x_2316161_bjit_e_0_lv_app" parent="NULL" relationship="NULL" sys_domain="global" view="4045675bdf05468999f1b6296cf6bd43">5a1c61db6d9f4053a424309de776896a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 04:59:44</sys_created_on>
+            <sys_id>22340f125b3e4a8b9205f2a4841dd049</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 04:59:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>duration</element>
+            <list_id display_value="x_2316161_bjit_e_0_lv_app" element="NULL" name="x_2316161_bjit_e_0_lv_app" parent="NULL" relationship="NULL" sys_domain="global" view="4045675bdf05468999f1b6296cf6bd43">5a1c61db6d9f4053a424309de776896a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 04:59:44</sys_created_on>
+            <sys_id>7c55773281c34c9a82feb1dcff6b0c25</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 04:59:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>status</element>
+            <list_id display_value="x_2316161_bjit_e_0_lv_app" element="NULL" name="x_2316161_bjit_e_0_lv_app" parent="NULL" relationship="NULL" sys_domain="global" view="4045675bdf05468999f1b6296cf6bd43">5a1c61db6d9f4053a424309de776896a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 04:59:44</sys_created_on>
+            <sys_id>3b8fbd82e1124e848b8904f8726f34b6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 04:59:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>approver</element>
+            <list_id display_value="x_2316161_bjit_e_0_lv_app" element="NULL" name="x_2316161_bjit_e_0_lv_app" parent="NULL" relationship="NULL" sys_domain="global" view="4045675bdf05468999f1b6296cf6bd43">5a1c61db6d9f4053a424309de776896a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 04:59:44</sys_created_on>
+            <sys_id>2330c0293ceb4a0395af647bb30a73f6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 04:59:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>approval_date</element>
+            <list_id display_value="x_2316161_bjit_e_0_lv_app" element="NULL" name="x_2316161_bjit_e_0_lv_app" parent="NULL" relationship="NULL" sys_domain="global" view="4045675bdf05468999f1b6296cf6bd43">5a1c61db6d9f4053a424309de776896a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 04:59:44</sys_created_on>
+            <sys_id>8327053b42ea42b2a8ccbb00acaccccf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 04:59:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>hr_reviewer</element>
+            <list_id display_value="x_2316161_bjit_e_0_lv_app" element="NULL" name="x_2316161_bjit_e_0_lv_app" parent="NULL" relationship="NULL" sys_domain="global" view="4045675bdf05468999f1b6296cf6bd43">5a1c61db6d9f4053a424309de776896a</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 04:59:44</sys_created_on>
+            <sys_id>f90c895080a3445abbd4b0bb5302a0e5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 04:59:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_2316161_bjit_e_0_lv_app</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-16 04:59:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5a1c61db6d9f4053a424309de776896a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2316161_bjit_e_0_lv_app</sys_name>
+            <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+            <sys_update_name>sys_ui_list_x_2316161_bjit_e_0_lv_app_x_2316161_bjit_e_0_hr_leave</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-16 04:59:44</sys_updated_on>
+            <sys_user/>
+            <view display_value="HR Leave View" name="x_2316161_bjit_e_0_hr_leave">4045675bdf05468999f1b6296cf6bd43</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

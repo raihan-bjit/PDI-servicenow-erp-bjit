@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2316161_bjit_e_0_lv_app</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_2316161_bjit_e_0_lv_app">statusVALCHANGES<item endquery="false" field="status" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>BJIT ERP - Handle Leave Approval</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[
+(function executeRule(current, previous) {
+    var status = current.getValue('status');
+    var prevStatus = previous ? previous.getValue('status') : '';
+    if (status === prevStatus) return;
+
+    if (status === 'mgr_approved' && prevStatus === 'pending') {
+        current.setValue('approver', gs.getUserID());
+        current.setValue('approval_date', new GlideDateTime().getDisplayValue());
+        
+        // Check if HR review needed
+        var ltGr = new GlideRecord('x_2316161_bjit_e_0_lv_type');
+        if (ltGr.get(current.getValue('leave_type'))) {
+            if (ltGr.getValue('requires_hr') != '1') {
+                current.setValue('status', 'approved');
+            }
+        }
+    }
+    
+    if (status === 'approved' && prevStatus !== 'approved') {
+        if (!current.getValue('approver')) {
+            current.setValue('approver', gs.getUserID());
+            current.setValue('approval_date', new GlideDateTime().getDisplayValue());
+        }
+        // If approved by HR reviewer
+        if (prevStatus === 'mgr_approved') {
+            current.setValue('hr_reviewer', gs.getUserID());
+            current.setValue('hr_review_date', new GlideDateTime().getDisplayValue());
+        }
+        
+        // Update leave balance - add to used, subtract from remaining
+        var duration = parseFloat(current.getValue('duration') || '0');
+        var year = new GlideDateTime().getYearLocalTime();
+        var balGr = new GlideRecord('x_2316161_bjit_e_0_lv_bal');
+        balGr.addQuery('employee', current.getValue('employee'));
+        balGr.addQuery('leave_type', current.getValue('leave_type'));
+        balGr.addQuery('year', year);
+        balGr.query();
+        if (balGr.next()) {
+            var used = parseFloat(balGr.getValue('used_days') || '0');
+            var pending = parseFloat(balGr.getValue('pending_days') || '0');
+            var entitled = parseFloat(balGr.getValue('entitled_days') || '0');
+            var carried = parseFloat(balGr.getValue('carried_days') || '0');
+            balGr.setValue('used_days', (used + duration).toFixed(1));
+            balGr.setValue('pending_days', Math.max(0, pending - duration).toFixed(1));
+            balGr.setValue('remaining_days', (entitled + carried - used - duration - Math.max(0, pending - duration)).toFixed(1));
+            balGr.update();
+        }
+    }
+    
+    if (status === 'rejected') {
+        if (prevStatus === 'pending') {
+            current.setValue('approver', gs.getUserID());
+            current.setValue('approval_date', new GlideDateTime().getDisplayValue());
+        } else if (prevStatus === 'mgr_approved') {
+            current.setValue('hr_reviewer', gs.getUserID());
+            current.setValue('hr_review_date', new GlideDateTime().getDisplayValue());
+        }
+        // Remove from pending
+        var dur = parseFloat(current.getValue('duration') || '0');
+        var yr = new GlideDateTime().getYearLocalTime();
+        var bGr = new GlideRecord('x_2316161_bjit_e_0_lv_bal');
+        bGr.addQuery('employee', current.getValue('employee'));
+        bGr.addQuery('leave_type', current.getValue('leave_type'));
+        bGr.addQuery('year', yr);
+        bGr.query();
+        if (bGr.next()) {
+            var pend = parseFloat(bGr.getValue('pending_days') || '0');
+            var ent = parseFloat(bGr.getValue('entitled_days') || '0');
+            var car = parseFloat(bGr.getValue('carried_days') || '0');
+            var use = parseFloat(bGr.getValue('used_days') || '0');
+            bGr.setValue('pending_days', Math.max(0, pend - dur).toFixed(1));
+            bGr.setValue('remaining_days', (ent + car - use - Math.max(0, pend - dur)).toFixed(1));
+            bGr.update();
+        }
+    }
+    
+    if (status === 'cancelled' && (prevStatus === 'pending' || prevStatus === 'draft')) {
+        // Remove from pending
+        var durC = parseFloat(current.getValue('duration') || '0');
+        var yrC = new GlideDateTime().getYearLocalTime();
+        var bcGr = new GlideRecord('x_2316161_bjit_e_0_lv_bal');
+        bcGr.addQuery('employee', current.getValue('employee'));
+        bcGr.addQuery('leave_type', current.getValue('leave_type'));
+        bcGr.addQuery('year', yrC);
+        bcGr.query();
+        if (bcGr.next()) {
+            var pendC = parseFloat(bcGr.getValue('pending_days') || '0');
+            var entC = parseFloat(bcGr.getValue('entitled_days') || '0');
+            var carC = parseFloat(bcGr.getValue('carried_days') || '0');
+            var useC = parseFloat(bcGr.getValue('used_days') || '0');
+            bcGr.setValue('pending_days', Math.max(0, pendC - durC).toFixed(1));
+            bcGr.setValue('remaining_days', (entC + carC - useC - Math.max(0, pendC - durC)).toFixed(1));
+            bcGr.update();
+        }
+    }
+})(current, previous);
+    ]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-16 04:59:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c7ab3dc2575b42a0ab312b9e404a4dac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BJIT ERP - Handle Leave Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_script_c7ab3dc2575b42a0ab312b9e404a4dac</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-16 04:59:36</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=c7ab3dc2575b42a0ab312b9e404a4dac"/>
+</record_update>

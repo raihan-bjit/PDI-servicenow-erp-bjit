@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2316161_bjit_e_0_lv_app</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>BJIT ERP - Validate Overlapping Leave</name>
+        <order>200</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[
+(function executeRule(current, previous) {
+    var employee = current.getValue('employee');
+    var startDate = current.getValue('start_date');
+    var endDate = current.getValue('end_date');
+    if (!employee || !startDate || !endDate) return;
+
+    var gr = new GlideRecord('x_2316161_bjit_e_0_lv_app');
+    gr.addQuery('employee', employee);
+    gr.addQuery('status', 'NOT IN', 'rejected,cancelled');
+    gr.addQuery('start_date', '<=', endDate);
+    gr.addQuery('end_date', '>=', startDate);
+    if (current.getValue('sys_id')) {
+        gr.addQuery('sys_id', '!=', current.getValue('sys_id'));
+    }
+    gr.query();
+    if (gr.next()) {
+        gs.addErrorMessage('Overlapping leave application exists (' + gr.getValue('number') + '). Please check your existing applications.');
+        current.setAbortAction(true);
+    }
+})(current, previous);
+    ]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-16 04:59:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8961bfe10d634a9aa197fe42d3300f3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BJIT ERP - Validate Overlapping Leave</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_script_8961bfe10d634a9aa197fe42d3300f3b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-16 04:59:36</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=8961bfe10d634a9aa197fe42d3300f3b"/>
+</record_update>

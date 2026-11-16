@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2316161_bjit_e_0_lv_app</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>BJIT ERP - Calculate Leave Duration</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[
+(function executeRule(current, previous) {
+    var startDate = current.getValue('start_date');
+    var endDate = current.getValue('end_date');
+    if (!startDate || !endDate) return;
+
+    var start = new GlideDateTime(startDate + ' 00:00:00');
+    var end = new GlideDateTime(endDate + ' 00:00:00');
+    
+    if (end.compareTo(start) < 0) {
+        gs.addErrorMessage('End date must be on or after start date.');
+        current.setAbortAction(true);
+        return;
+    }
+
+    // Get weekend days from attendance config
+    var weekendDays = 'saturday,sunday';
+    var cfgGr = new GlideRecord('x_2316161_bjit_e_0_att_cfg');
+    cfgGr.addQuery('active', true);
+    cfgGr.setLimit(1);
+    cfgGr.query();
+    if (cfgGr.next()) {
+        weekendDays = cfgGr.getValue('weekend_days') || 'saturday,sunday';
+    }
+    var weekends = weekendDays.toLowerCase().split(',');
+
+    // Get holidays
+    var holidays = {};
+    var holGr = new GlideRecord('x_2316161_bjit_e_0_holiday');
+    holGr.addQuery('active', true);
+    holGr.query();
+    while (holGr.next()) {
+        holidays[holGr.getValue('date')] = true;
+    }
+
+    var dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+    var count = 0;
+    var current_dt = new GlideDateTime(start);
+    var endCheck = new GlideDateTime(end);
+    endCheck.addDaysLocalTime(1);
+
+    while (current_dt.compareTo(endCheck) < 0) {
+        var dayOfWeek = current_dt.getDayOfWeekLocalTime();
+        var dayName = dayNames[dayOfWeek - 1];
+        var dateStr = current_dt.getDate().toString();
+        
+        var isWeekend = false;
+        for (var w = 0; w < weekends.length; w++) {
+            if (weekends[w].trim() === dayName) { isWeekend = true; break; }
+        }
+        
+        if (!isWeekend && !holidays[dateStr]) {
+            count++;
+        }
+        current_dt.addDaysLocalTime(1);
+    }
+    
+    current.setValue('duration', count);
+})(current, previous);
+    ]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-16 04:59:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>060d9e31797c432584c88311640c6fdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BJIT ERP - Calculate Leave Duration</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_script_060d9e31797c432584c88311640c6fdb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-16 04:59:36</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=060d9e31797c432584c88311640c6fdb"/>
+</record_update>
