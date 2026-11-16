@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <base_uri>/api/x_2316161_bjit_e_0/attendance</base_uri>
+        <consumes>application/json</consumes>
+        <consumes_customized>true</consumes_customized>
+        <default_version/>
+        <doc_link/>
+        <enforce_acl/>
+        <is_versioned>false</is_versioned>
+        <name>BJIT Attendance</name>
+        <namespace>x_2316161_bjit_e_0</namespace>
+        <produces>application/json</produces>
+        <produces_customized>true</produces_customized>
+        <service_id>attendance</service_id>
+        <short_description>Server-side attendance PUNCH NOW endpoints for the authenticated employee.</short_description>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-16 10:00:00</sys_created_on>
+        <sys_id>5f517282d1f6451183f79669b91b9672</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BJIT Attendance</sys_name>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_ws_definition_5f517282d1f6451183f79669b91b9672</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-16 10:00:00</sys_updated_on>
+    </sys_ws_definition>
+</record_update>

@@ -29,17 +29,18 @@
         <role_conditions/>
         <script><![CDATA[
 (function executeRule(current, previous) {
-    var checkIn = current.getValue('check_in');
-    var checkOut = current.getValue('check_out');
-    if (checkIn && checkOut) {
-        var inParts = checkIn.split(':');
-        var outParts = checkOut.split(':');
-        var inMinutes = parseInt(inParts[0], 10) * 60 + parseInt(inParts[1], 10);
-        var outMinutes = parseInt(outParts[0], 10) * 60 + parseInt(outParts[1], 10);
-        var diffMinutes = outMinutes - inMinutes;
-        if (diffMinutes < 0) diffMinutes += 1440;
-        var hours = (diffMinutes / 60).toFixed(2);
-        current.setValue('working_hours', hours);
+    // glide_time values are stored as '1970-01-01 HH:MM:SS' (UTC), so read only the time of day.
+    function secondsOfDay(value) {
+        var m = /(\d{1,2}):(\d{2})(?::(\d{2}))?\s*$/.exec(String(value || ''));
+        return m ? parseInt(m[1], 10) * 3600 + parseInt(m[2], 10) * 60 + parseInt(m[3] || '0', 10) : null;
+    }
+
+    var inSeconds = secondsOfDay(current.getValue('check_in'));
+    var outSeconds = secondsOfDay(current.getValue('check_out'));
+    if (inSeconds !== null && outSeconds !== null) {
+        var diffSeconds = outSeconds - inSeconds;
+        if (diffSeconds < 0) diffSeconds += 86400;
+        current.setValue('working_hours', (diffSeconds / 3600).toFixed(2));
     }
 })(current, previous);
     ]]></script>

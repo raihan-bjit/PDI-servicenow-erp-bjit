@@ -29,8 +29,14 @@
         <role_conditions/>
         <script><![CDATA[
 (function executeRule(current, previous) {
-    var checkIn = current.getValue('check_in');
-    if (!checkIn) return;
+    // glide_time values are stored as '1970-01-01 HH:MM:SS' (UTC), so read only the time of day.
+    function secondsOfDay(value) {
+        var m = /(\d{1,2}):(\d{2})(?::(\d{2}))?\s*$/.exec(String(value || ''));
+        return m ? parseInt(m[1], 10) * 3600 + parseInt(m[2], 10) * 60 + parseInt(m[3] || '0', 10) : null;
+    }
+
+    var inSeconds = secondsOfDay(current.getValue('check_in'));
+    if (inSeconds === null) return;
 
     var configGr = new GlideRecord('x_2316161_bjit_e_0_att_cfg');
     configGr.addQuery('active', true);
@@ -38,16 +44,11 @@
     configGr.query();
     if (!configGr.next()) return;
 
-    var workStart = configGr.getValue('work_start');
+    var startSeconds = secondsOfDay(configGr.getValue('work_start'));
     var gracePeriod = parseInt(configGr.getValue('grace_period') || '0', 10);
 
-    if (workStart) {
-        var startParts = workStart.split(':');
-        var inParts = checkIn.split(':');
-        var startMinutes = parseInt(startParts[0], 10) * 60 + parseInt(startParts[1], 10);
-        var inMinutes = parseInt(inParts[0], 10) * 60 + parseInt(inParts[1], 10);
-        current.setValue('is_late', inMinutes > (startMinutes + gracePeriod));
-    }
+    if (startSeconds !== null)
+        current.setValue('is_late', inSeconds > (startSeconds + gracePeriod * 60));
 })(current, previous);
     ]]></script>
         <sys_class_name>sys_script</sys_class_name>

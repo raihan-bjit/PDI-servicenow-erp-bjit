@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>true</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>GET</http_method>
+        <name>today</name>
+        <operation_script><![CDATA[
+(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    response.setContentType('application/json');
+    try {
+        if (!gs.hasRole('x_2316161_bjit_e_0.employee'))
+            throw { status: 403, code: 'forbidden', message: 'You do not have permission to view attendance.' };
+
+        var state = new x_2316161_bjit_e_0.BjitAttendancePunch().getToday();
+        response.setStatus(200);
+        response.setBody(state);
+    } catch (e) {
+        if (e && e.status && e.code) {
+            response.setStatus(e.status);
+            response.setBody({ code: e.code, message: e.message });
+        } else {
+            gs.error('BJIT attendance today failed: ' + e);
+            response.setStatus(500);
+            response.setBody({ code: 'attendance_failed', message: 'Attendance could not be loaded. Please try again.' });
+        }
+    }
+})(request, response);
+        ]]></operation_script>
+        <operation_uri>/api/x_2316161_bjit_e_0/attendance/today</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>true</produces_customized>
+        <relative_path>/today</relative_path>
+        <request_example/>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>false</requires_snc_internal_role>
+        <short_description>Returns today's attendance state for the authenticated employee without changing data.</short_description>
+        <support_trailing_slash>false</support_trailing_slash>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-16 10:00:00</sys_created_on>
+        <sys_id>7a5f2b3cc93b47f6870b228e9f4e2ce2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>today</sys_name>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_ws_operation_7a5f2b3cc93b47f6870b228e9f4e2ce2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-16 10:00:00</sys_updated_on>
+        <web_service_definition display_value="BJIT Attendance">5f517282d1f6451183f79669b91b9672</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

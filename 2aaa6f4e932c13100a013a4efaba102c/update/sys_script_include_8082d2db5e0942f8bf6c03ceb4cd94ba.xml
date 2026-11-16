@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2316161_bjit_e_0.BjitAttendancePunch</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Server-side PUNCH NOW logic. Resolves the employee from the authenticated session, keeps one daily attendance record per employee and date, preserves the first punch as check-in and stores the latest punch as check-out.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>BjitAttendancePunch</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[
+var BjitAttendancePunch = Class.create();
+BjitAttendancePunch.prototype = {
+    ATTEND_TABLE: 'x_2316161_bjit_e_0_attend',
+    EMP_TABLE: 'x_2316161_bjit_e_0_emp',
+    INACTIVE_STATUSES: ['terminated', 'resigned', 'retired'],
+
+    initialize: function () {},
+
+    // Records a punch for the authenticated user and returns today's attendance state.
+    punch: function () {
+        var emp = this._getCallerEmployee();
+        var now = new GlideDateTime();
+        var date = now.getLocalDate().getValue();
+        var time = this._timeOfDay(now);
+
+        var att = this._findAttendance(emp.sysId, date);
+        if (!att) {
+            att = new GlideRecord(this.ATTEND_TABLE);
+            att.initialize();
+            att.setValue('employee', emp.sysId);
+            att.setValue('date', date);
+            att.setValue('check_in', time);
+            att.setValue('status', 'present');
+            att.setValue('source', 'system');
+            if (att.insert())
+                return this._buildState(emp, att, now);
+            // A concurrent first punch won the unique (employee, date) index.
+            att = this._findAttendance(emp.sysId, date);
+            if (!att)
+                throw this._error(500, 'punch_failed', 'The punch could not be saved. Please try again.');
+        }
+
+        if (!att.getValue('check_in')) {
+            att.setValue('check_in', time);
+            if (att.getValue('status') === 'absent')
+                att.setValue('status', 'present');
+        } else {
+            att.setValue('check_out', time);
+        }
+        if (!att.update())
+            throw this._error(500, 'punch_failed', 'The punch could not be saved. Please try again.');
+        return this._buildState(emp, att, now);
+    },
+
+    // Returns today's attendance state for the authenticated user without changing data.
+    getToday: function () {
+        var emp = this._getCallerEmployee();
+        var now = new GlideDateTime();
+        var att = this._findAttendance(emp.sysId, now.getLocalDate().getValue());
+        return this._buildState(emp, att, now);
+    },
+
+    _getCallerEmployee: function () {
+        var userId = gs.getUserID();
+        if (!userId)
+            throw this._error(401, 'not_authenticated', 'You must be logged in to punch.');
+
+        var empGr = new GlideRecord(this.EMP_TABLE);
+        empGr.addQuery('user', userId);
+        empGr.orderBy('sys_created_on');
+        empGr.setLimit(1);
+        empGr.query();
+        if (!empGr.next())
+            throw this._error(403, 'no_employee_profile', 'Your ServiceNow account is not linked to an employee profile. Please contact HR or the BJIT ERP administrator.');
+        if (this.INACTIVE_STATUSES.indexOf(empGr.getValue('employment_status')) !== -1)
+            throw this._error(403, 'employee_inactive', 'Your employee profile is currently inactive. Please contact HR for assistance.');
+
+        return {
+            sysId: empGr.getUniqueValue(),
+            name: empGr.getDisplayValue('user'),
+            number: empGr.getValue('number')
+        };
+    },
+
+    _findAttendance: function (empId, date) {
+        var gr = new GlideRecord(this.ATTEND_TABLE);
+        gr.addQuery('employee', empId);
+        gr.addQuery('date', date);
+        gr.setLimit(1);
+        gr.query();
+        return gr.next() ? gr : null;
+    },
+
+    // check_in/check_out are glide_time fields, stored as 1970-01-01 HH:MM:SS in UTC.
+    _timeOfDay: function (gdt) {
+        return '1970-01-01 ' + gdt.getValue().substring(11, 19);
+    },
+
+    _buildState: function (emp, att, now) {
+        var state = {
+            employee: { sys_id: emp.sysId, name: emp.name, number: emp.number },
+            date: now.getLocalDate().getValue(),
+            server_time_ms: now.getNumericValue(),
+            tz_offset_ms: now.getTZOffset(),
+            punched: !!att,
+            attendance_id: att ? att.getUniqueValue() : '',
+            status: att ? { value: att.getValue('status'), display: att.getDisplayValue('status') } : null,
+            check_in: null,
+            check_out: null,
+            last_punch: null,
+            working_hours: att ? att.getValue('working_hours') : null
+        };
+        if (att && att.getValue('check_in'))
+            state.check_in = { value: att.getValue('check_in'), display: att.getDisplayValue('check_in') };
+        if (att && att.getValue('check_out'))
+            state.check_out = { value: att.getValue('check_out'), display: att.getDisplayValue('check_out') };
+        state.last_punch = state.check_out || state.check_in;
+        return state;
+    },
+
+    _error: function (status, code, message) {
+        return { status: status, code: code, message: message };
+    },
+
+    type: 'BjitAttendancePunch'
+};
+    ]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-16 10:00:00</sys_created_on>
+        <sys_id>8082d2db5e0942f8bf6c03ceb4cd94ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BjitAttendancePunch</sys_name>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_script_include_8082d2db5e0942f8bf6c03ceb4cd94ba</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-16 10:00:00</sys_updated_on>
+    </sys_script_include>
+</record_update>
