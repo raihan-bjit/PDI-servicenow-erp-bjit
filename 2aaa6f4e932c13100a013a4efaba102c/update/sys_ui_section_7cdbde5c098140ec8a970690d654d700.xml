@@ -4,13 +4,13 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:46:50</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:38</sys_created_on>
             <sys_id>b6629d2209244b0a881aa64f1910eb73</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Attendance Details" display_value="Attendance Details" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">7cdbde5c098140ec8a970690d654d700</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:46:50</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:38</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>number</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:46:50</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:38</sys_created_on>
             <sys_id>e7ac15c8710949889909e32e4bd53fad</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Attendance Details" display_value="Attendance Details" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">7cdbde5c098140ec8a970690d654d700</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:46:50</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>employee</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:46:50</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:38</sys_created_on>
             <sys_id>d4ac03db61bb4129ba5c0be7749a2360</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Attendance Details" display_value="Attendance Details" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">7cdbde5c098140ec8a970690d654d700</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:46:50</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>date</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:46:50</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:38</sys_created_on>
             <sys_id>2dab1d1a4dd1441abad1c0981c00a9c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Attendance Details" display_value="Attendance Details" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">7cdbde5c098140ec8a970690d654d700</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:46:50</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>.split</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:46:50</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:38</sys_created_on>
             <sys_id>2e72630125ce473da984fd147b4fc36d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Attendance Details" display_value="Attendance Details" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">7cdbde5c098140ec8a970690d654d700</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:46:50</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:38</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>status</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:46:50</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:38</sys_created_on>
             <sys_id>8c97d418b3ac47ffb26b0ea5f31c6711</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Attendance Details" display_value="Attendance Details" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">7cdbde5c098140ec8a970690d654d700</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:46:50</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>source</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:46:50</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:38</sys_created_on>
             <sys_id>12a13e916a7a4e038f502d27843861e2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Attendance Details" display_value="Attendance Details" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">7cdbde5c098140ec8a970690d654d700</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:46:50</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>working_hours</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:46:50</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:38</sys_created_on>
             <sys_id>437e7d83fd494b6a9a059084c8e48537</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Attendance Details" display_value="Attendance Details" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">7cdbde5c098140ec8a970690d654d700</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:46:50</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>.end_split</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:46:50</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:38</sys_created_on>
             <sys_id>454e8fd8f40841418ff56c2c49c62170</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Attendance Details" display_value="Attendance Details" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">7cdbde5c098140ec8a970690d654d700</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:46:50</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:38</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>

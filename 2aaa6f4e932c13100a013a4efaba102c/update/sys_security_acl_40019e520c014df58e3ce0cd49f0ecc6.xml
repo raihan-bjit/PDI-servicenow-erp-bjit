@@ -7,7 +7,7 @@
         <condition/>
         <controlled_by_refs/>
         <decision_type>allow</decision_type>
-        <description/>
+        <description>Allow write for status in x_2316161_bjit_e_0_lv_app, for users with roles (x_2316161_bjit_e_0.erp_admin, x_2316161_bjit_e_0.hr_admin).</description>
         <local_or_existing>Existing</local_or_existing>
         <name>x_2316161_bjit_e_0_lv_app.status</name>
         <operation display_value="write">write</operation>
@@ -17,14 +17,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-11-16 04:59:37</sys_created_on>
         <sys_id>40019e520c014df58e3ce0cd49f0ecc6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>x_2316161_bjit_e_0_lv_app.status</sys_name>
         <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
         <sys_policy/>
         <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
         <sys_update_name>sys_security_acl_40019e520c014df58e3ce0cd49f0ecc6</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-11-16 04:59:37</sys_updated_on>
+        <sys_updated_on>2026-11-17 02:54:19</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>

@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>BJIT Employee - base access to personal information and self-service features</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>xI6ueULhNihyL2KWc3iwiF101QsS0I9J15HwUwxX88w=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_2316161_bjit_e_0.employee</name>

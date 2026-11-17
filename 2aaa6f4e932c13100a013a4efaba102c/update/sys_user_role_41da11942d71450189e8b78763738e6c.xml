@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>BJIT IT Administrator - IT support management, account provisioning, system access</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>LHErqylmsT/Ab+YHLQc4DCRI38OYG/LvMRc1PjN6aTw=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_2316161_bjit_e_0.it_admin</name>

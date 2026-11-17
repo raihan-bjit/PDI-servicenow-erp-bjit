@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>BJIT Executive - read-only access to organizational summaries and reports</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>hlS6apjmsyG0UAhBEsdaIeqiCToqpM3VJAjJFtd6bP0=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_2316161_bjit_e_0.executive</name>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
     <sysevent_register action="INSERT_OR_UPDATE">
+        <caller_access/>
+        <derived_priority>100</derived_priority>
         <description>Fired when an employee submits a new leave request, to notify their direct manager.</description>
         <event_name>x_2316161_bjit_e_0.leave.submitted</event_name>
         <fired_by/>

@@ -38,7 +38,7 @@
         <requires_acl_authorization>false</requires_acl_authorization>
         <requires_authentication>true</requires_authentication>
         <requires_snc_internal_role>false</requires_snc_internal_role>
-        <short_description>Approves the request at whatever stage it is currently awaiting, if the caller is the assigned approver for that stage.</short_description>
+        <short_description>Approves the request at whatever stage it is currently awaiting, if the caller i</short_description>
         <support_trailing_slash>false</support_trailing_slash>
         <sys_class_name>sys_ws_operation</sys_class_name>
         <sys_created_by>admin</sys_created_by>

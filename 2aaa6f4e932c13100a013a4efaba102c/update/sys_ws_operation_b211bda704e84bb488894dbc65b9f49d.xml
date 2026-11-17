@@ -35,7 +35,7 @@
         <requires_acl_authorization>false</requires_acl_authorization>
         <requires_authentication>true</requires_authentication>
         <requires_snc_internal_role>false</requires_snc_internal_role>
-        <short_description>HR/ERP-admin-only: resets an employee's account password with a one-time temporary value and forces a change at next login.</short_description>
+        <short_description>HR/ERP-admin-only: resets an employee's account password with a one-time tempora</short_description>
         <support_trailing_slash>false</support_trailing_slash>
         <sys_class_name>sys_ws_operation</sys_class_name>
         <sys_created_by>admin</sys_created_by>

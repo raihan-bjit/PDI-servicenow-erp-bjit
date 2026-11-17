@@ -3,7 +3,7 @@
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:18</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:31</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>4f5ba38f184c445c8f9661f0fbff15ff</sys_id>
@@ -12,12 +12,12 @@
             <sys_ui_form display_value="x_2316161_bjit_e_0_att_cfg" name="x_2316161_bjit_e_0_att_cfg" sys_domain="global" view="Default view">1f7a5a6689004ef38848bcc55db6ace9</sys_ui_form>
             <sys_ui_section caption="Configuration" display_value="Configuration" name="x_2316161_bjit_e_0_att_cfg" sys_domain="global" view="Default view">2f8e5a69d25140edb19b099525413d68</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:18</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:31</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:18</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:31</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>33eb7ec4c34448c0ba9a723733abe2c2</sys_id>
@@ -26,7 +26,7 @@
             <sys_ui_form display_value="x_2316161_bjit_e_0_att_cfg" name="x_2316161_bjit_e_0_att_cfg" sys_domain="global" view="Default view">1f7a5a6689004ef38848bcc55db6ace9</sys_ui_form>
             <sys_ui_section caption="Thresholds" display_value="Thresholds" name="x_2316161_bjit_e_0_att_cfg" sys_domain="global" view="Default view">1cec8756fec34c48a17cc1cec4eb5cbf</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:18</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:31</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_2316161_bjit_e_0_att_cfg</name>

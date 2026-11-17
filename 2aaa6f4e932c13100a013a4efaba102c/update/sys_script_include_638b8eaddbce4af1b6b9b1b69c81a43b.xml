@@ -5,7 +5,7 @@
         <api_name>x_2316161_bjit_e_0.BjitLeaveApproval</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
-        <description>Server-side sequential leave approval workflow: Employee -> Direct Manager -> Department Head -> HR/Final (when required by the leave type). Resolves approvers from existing employee/manager/department data; enforces that only the assigned approver for the current stage may act.</description>
+        <description>Server-side sequential leave approval workflow: Employee -&gt; Direct Manager -&gt; Department Head -&gt; HR/Final (when required by the leave type). Resolves approvers from existing employee/manager/department data; enforces that only the assigned approver for the current stage may act.</description>
         <mobile_callable>false</mobile_callable>
         <name>BjitLeaveApproval</name>
         <sandbox_callable>false</sandbox_callable>

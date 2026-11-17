@@ -4,7 +4,7 @@
         <base_uri>/api/x_2316161_bjit_e_0/attendance</base_uri>
         <consumes>application/json</consumes>
         <consumes_customized>true</consumes_customized>
-        <default_version/>
+        <default_version>No active default version</default_version>
         <doc_link/>
         <enforce_acl/>
         <is_versioned>false</is_versioned>

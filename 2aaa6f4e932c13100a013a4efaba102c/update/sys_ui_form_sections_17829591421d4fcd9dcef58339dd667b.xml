@@ -3,7 +3,7 @@
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:18</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:31</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>12ba81ef995f462d90162871527b0356</sys_id>
@@ -12,12 +12,12 @@
             <sys_ui_form display_value="x_2316161_bjit_e_0_attend" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">17829591421d4fcd9dcef58339dd667b</sys_ui_form>
             <sys_ui_section caption="Attendance Details" display_value="Attendance Details" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">7cdbde5c098140ec8a970690d654d700</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:18</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:31</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:18</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:31</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>e39adff636364d30a0e7120fdfdf11e9</sys_id>
@@ -26,12 +26,12 @@
             <sys_ui_form display_value="x_2316161_bjit_e_0_attend" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">17829591421d4fcd9dcef58339dd667b</sys_ui_form>
             <sys_ui_section caption="Time Details" display_value="Time Details" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">a3007174f4404c829abb8e5fea942e5a</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:18</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:31</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:18</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:31</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>277a5425bae542ed8adf1bcd92d4af64</sys_id>
@@ -40,7 +40,7 @@
             <sys_ui_form display_value="x_2316161_bjit_e_0_attend" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">17829591421d4fcd9dcef58339dd667b</sys_ui_form>
             <sys_ui_section caption="Remarks" display_value="Remarks" name="x_2316161_bjit_e_0_attend" sys_domain="global" view="Default view">fa9feca33fe947bb89bea105b4456052</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:18</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:31</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_2316161_bjit_e_0_attend</name>

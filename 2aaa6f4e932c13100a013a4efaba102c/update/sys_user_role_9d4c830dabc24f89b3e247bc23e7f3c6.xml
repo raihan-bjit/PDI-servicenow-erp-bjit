@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>BJIT HR Administrator - employee records management, leave management, attendance oversight</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>0Hj6AVFYt6wwvPo+nuxby0j/AlZBfXRMKeNMYSMid1A=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_2316161_bjit_e_0.hr_admin</name>

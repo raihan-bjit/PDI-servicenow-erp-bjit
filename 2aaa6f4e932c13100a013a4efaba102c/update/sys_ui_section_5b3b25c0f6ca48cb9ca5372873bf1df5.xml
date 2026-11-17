@@ -4,13 +4,13 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:45</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>eeb5469a506e4a3091c7ec4b9a931a5d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Balance Details" display_value="Balance Details" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">5b3b25c0f6ca48cb9ca5372873bf1df5</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:45</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>employee</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:45</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>34e54075c96840fdac5c3c086b7b1c0a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Balance Details" display_value="Balance Details" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">5b3b25c0f6ca48cb9ca5372873bf1df5</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:45</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>leave_type</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:45</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>db12e9a3210e46c89584f0338c7b4859</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Balance Details" display_value="Balance Details" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">5b3b25c0f6ca48cb9ca5372873bf1df5</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:45</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>year</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:45</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>2a877c8c9bc841198926b7ea2961fa30</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Balance Details" display_value="Balance Details" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">5b3b25c0f6ca48cb9ca5372873bf1df5</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:45</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>.split</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:45</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>b9ded475cd4d4e7e8d7bb06bf1c3f7a1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Balance Details" display_value="Balance Details" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">5b3b25c0f6ca48cb9ca5372873bf1df5</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:45</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>entitled_days</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:45</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>c70352a8f0d345aa91c488b431f1f67f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Balance Details" display_value="Balance Details" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">5b3b25c0f6ca48cb9ca5372873bf1df5</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:45</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>carried_days</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:45</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>bc09cadbc7ab4cfabb9d4b18ddce364f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Balance Details" display_value="Balance Details" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">5b3b25c0f6ca48cb9ca5372873bf1df5</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:45</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>active</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:45</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>9cb263dbbbe449a6a1732e9b43bd36d6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Balance Details" display_value="Balance Details" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">5b3b25c0f6ca48cb9ca5372873bf1df5</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:45</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>.end_split</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 04:59:45</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>a2df71096b814a3585670fc9ccfb6181</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Balance Details" display_value="Balance Details" name="x_2316161_bjit_e_0_lv_bal" sys_domain="global" view="Default view">5b3b25c0f6ca48cb9ca5372873bf1df5</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 04:59:45</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>

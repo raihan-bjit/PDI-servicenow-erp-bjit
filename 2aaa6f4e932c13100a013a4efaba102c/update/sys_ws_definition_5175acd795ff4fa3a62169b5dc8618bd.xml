@@ -4,7 +4,7 @@
         <base_uri>/api/x_2316161_bjit_e_0/leave</base_uri>
         <consumes>application/json</consumes>
         <consumes_customized>true</consumes_customized>
-        <default_version/>
+        <default_version>No active default version</default_version>
         <doc_link/>
         <enforce_acl/>
         <is_versioned>false</is_versioned>
@@ -13,7 +13,7 @@
         <produces>application/json</produces>
         <produces_customized>true</produces_customized>
         <service_id>leave</service_id>
-        <short_description>Sequential leave approval workflow endpoints: submit, my-queue, approve, reject, cancel.</short_description>
+        <short_description>Sequential leave approval workflow endpoints: submit, my-queue, approve, reject,</short_description>
         <sys_class_name>sys_ws_definition</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-11-17 02:00:00</sys_created_on>

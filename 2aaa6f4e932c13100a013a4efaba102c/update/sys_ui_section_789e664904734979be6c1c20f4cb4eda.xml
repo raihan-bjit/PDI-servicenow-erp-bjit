@@ -4,13 +4,13 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>b64ae52fe1a24c5cb0c1283b60987f94</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>date_of_birth</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>8590d24b161e4847bc1ac2c9d1507cad</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>blood_group</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>51593099aef248dd8d99cf869b110b54</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>.split</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>282682f5f15d4a7089e0ebe688da91a7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>marital_status</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>69bb4e6d85bb44e48cda360eec908a83</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>national_id</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>abe475e7d431427692d9e5ff5df749ec</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>.end_split</element>
             <position>6</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>2725af51afcc471ca5d0950b798770db</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>.begin_split</element>
             <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>7a7c00e763bc40939b109e1c11205bca</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>personal_email</element>
             <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>623c97c8d370449b9e7d5701916a376d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -130,13 +130,13 @@
             <element>emergency_contact</element>
             <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>ac323448bd1f46cca26709621d7e2b2f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -144,13 +144,13 @@
             <element>.split</element>
             <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>1fce8253e0c64db993c3fa80f17a8c99</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -158,13 +158,13 @@
             <element>emergency_phone</element>
             <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>3259e5ca4ea648c5b2a45daec46f2f8b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -172,13 +172,13 @@
             <element>emergency_relation</element>
             <position>12</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>4d3a66ac066a45348eecb3fe74dd00ef</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -186,13 +186,13 @@
             <element>.end_split</element>
             <position>13</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-11-16 06:43:23</sys_created_on>
+            <sys_created_on>2026-11-16 08:54:37</sys_created_on>
             <sys_id>c9bf0ddc8be740d1aa5c4be6354728c0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Personal Information" display_value="Personal Information" name="x_2316161_bjit_e_0_emp" sys_domain="global" view="Default view">789e664904734979be6c1c20f4cb4eda</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-11-16 06:43:23</sys_updated_on>
+            <sys_updated_on>2026-11-16 08:54:37</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>

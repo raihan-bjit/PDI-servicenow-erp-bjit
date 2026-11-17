@@ -4,7 +4,7 @@
         <can_delegate>true</can_delegate>
         <description>BJIT ERP Administrator - full application administration and configuration</description>
         <elevated_privilege>false</elevated_privilege>
-        <federated_id/>
+        <federated_id>5J7jefWIS2IvPFWPwFU7c1nnYcy0SI4MG3FpyrOR2ME=</federated_id>
         <grantable>true</grantable>
         <includes_roles/>
         <name>x_2316161_bjit_e_0.erp_admin</name>
