@@ -22,8 +22,20 @@ if (gs.hasRole('x_2316161_bjit_e_0.hr_admin') || gs.hasRole('x_2316161_bjit_e_0.
             answer = userGr.getValue('manager') == gs.getUserID();
         }
     }
+} else if (current.employee.user == gs.getUserID()) {
+    answer = true;
 } else {
-    answer = current.employee.user == gs.getUserID();
+    // Department Head of the employee's department may review their request (no separate role required).
+    var empGr2 = new GlideRecord('x_2316161_bjit_e_0_emp');
+    if (empGr2.get(current.getValue('employee')) && empGr2.getValue('designation')) {
+        var desgnGr = new GlideRecord('x_2316161_bjit_e_0_desgn');
+        if (desgnGr.get(empGr2.getValue('designation')) && desgnGr.getValue('department')) {
+            var deptGr = new GlideRecord('cmn_department');
+            if (deptGr.get(desgnGr.getValue('department'))) {
+                answer = deptGr.getValue('dept_head') == gs.getUserID();
+            }
+        }
+    }
 }
     ]]></script>
         <security_attribute/>

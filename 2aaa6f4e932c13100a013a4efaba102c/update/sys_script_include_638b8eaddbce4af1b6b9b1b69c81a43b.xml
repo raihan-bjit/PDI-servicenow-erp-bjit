@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2316161_bjit_e_0.BjitLeaveApproval</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Server-side sequential leave approval workflow: Employee -> Direct Manager -> Department Head -> HR/Final (when required by the leave type). Resolves approvers from existing employee/manager/department data; enforces that only the assigned approver for the current stage may act.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>BjitLeaveApproval</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[
+var BjitLeaveApproval = Class.create();
+BjitLeaveApproval.prototype = {
+    LV_APP: 'x_2316161_bjit_e_0_lv_app',
+    EMP_TABLE: 'x_2316161_bjit_e_0_emp',
+    DESGN_TABLE: 'x_2316161_bjit_e_0_desgn',
+    LV_TYPE: 'x_2316161_bjit_e_0_lv_type',
+    ROLE_HR: 'x_2316161_bjit_e_0.hr_admin',
+    ROLE_ERP_ADMIN: 'x_2316161_bjit_e_0.erp_admin',
+    INACTIVE_STATUSES: ['terminated', 'resigned', 'retired'],
+
+    initialize: function () {},
+
+    // Employee submits a new leave request. The employee is always resolved from the session.
+    submit: function (leaveTypeId, startDate, endDate, reason) {
+        var emp = this._getCallerEmployee();
+        if (!leaveTypeId || !startDate || !endDate || !reason)
+            throw this._error(400, 'missing_fields', 'Leave type, start date, end date and reason are all required.');
+
+        var ctx = this._resolveContext(emp.sysId, emp.userId, leaveTypeId);
+        if (!ctx.managerId)
+            throw this._error(409, 'no_manager', 'You do not have a manager assigned. Please contact HR to configure your reporting manager before submitting leave requests.');
+        if (ctx.managerId === emp.userId)
+            throw this._error(500, 'manager_misconfigured', 'Your manager is configured as yourself. Please contact HR to correct this before submitting leave requests.');
+
+        var gr = new GlideRecord(this.LV_APP);
+        gr.initialize();
+        gr.setValue('employee', emp.sysId);
+        gr.setValue('leave_type', leaveTypeId);
+        gr.setValue('start_date', startDate);
+        gr.setValue('end_date', endDate);
+        gr.setValue('reason', reason);
+        gr.setValue('status', 'pending');
+        var id = gr.insert();
+        if (!id)
+            throw this._error(400, 'submit_failed', gr.getLastErrorMessage() || 'Unable to submit your leave request.');
+
+        this._notify(gr, 'submitted', ctx);
+        return this._decorate(gr, emp.userId);
+    },
+
+    // Items awaiting the current user's decision, grouped by stage, plus the employee's own requests.
+    myQueue: function () {
+        var userId = gs.getUserID();
+        if (!userId) throw this._error(401, 'not_authenticated', 'You must be logged in.');
+        var emp = this._findEmployeeByUser(userId);
+        var isHr = gs.hasRole(this.ROLE_HR) || gs.hasRole(this.ROLE_ERP_ADMIN);
+
+        var result = { asManager: [], asDeptHead: [], asFinalApprover: [], mine: [] };
+
+        if (emp) {
+            var mineGr = new GlideRecord(this.LV_APP);
+            mineGr.addQuery('employee', emp.sysId);
+            mineGr.orderByDesc('sys_created_on');
+            mineGr.setLimit(50);
+            mineGr.query();
+            while (mineGr.next()) result.mine.push(this._decorate(mineGr, userId));
+        }
+
+        var pendingGr = new GlideRecord(this.LV_APP);
+        pendingGr.addQuery('status', 'pending');
+        pendingGr.query();
+        while (pendingGr.next()) {
+            var ctx1 = this._resolveContext(pendingGr.getValue('employee'), null, pendingGr.getValue('leave_type'));
+            if (ctx1.managerId === userId) result.asManager.push(this._decorate(pendingGr, userId));
+        }
+
+        var mgrApprovedGr = new GlideRecord(this.LV_APP);
+        mgrApprovedGr.addQuery('status', 'mgr_approved');
+        mgrApprovedGr.query();
+        while (mgrApprovedGr.next()) {
+            var ctx2 = this._resolveContext(mgrApprovedGr.getValue('employee'), null, mgrApprovedGr.getValue('leave_type'));
+            if ((ctx2.deptHeadId && ctx2.deptHeadId === userId) || (!ctx2.deptHeadId && isHr))
+                result.asDeptHead.push(this._decorate(mgrApprovedGr, userId));
+        }
+
+        if (isHr) {
+            var deptApprovedGr = new GlideRecord(this.LV_APP);
+            deptApprovedGr.addQuery('status', 'dept_approved');
+            deptApprovedGr.query();
+            while (deptApprovedGr.next()) result.asFinalApprover.push(this._decorate(deptApprovedGr, userId));
+        }
+
+        return result;
+    },
+
+    approve: function (sysId, comments) {
+        return this._decide(sysId, comments || '', true);
+    },
+
+    reject: function (sysId, comments) {
+        if (!comments)
+            throw this._error(400, 'comments_required', 'Please provide a reason for rejecting this request.');
+        return this._decide(sysId, comments, false);
+    },
+
+    // Employee cancels their own draft/pending request.
+    cancel: function (sysId) {
+        var emp = this._getCallerEmployee();
+        var gr = new GlideRecord(this.LV_APP);
+        if (!gr.get(sysId)) throw this._error(404, 'not_found', 'Leave request not found.');
+        if (gr.getValue('employee') !== emp.sysId)
+            throw this._error(403, 'forbidden', 'You can only cancel your own leave requests.');
+        var status = gr.getValue('status');
+        if (status !== 'draft' && status !== 'pending')
+            throw this._error(409, 'invalid_state', 'This request can no longer be cancelled (current status: ' + status + ').');
+        gr.setValue('status', 'cancelled');
+        if (!gr.update()) throw this._error(500, 'cancel_failed', gr.getLastErrorMessage() || 'Unable to cancel this request.');
+        return this._decorate(gr, emp.userId);
+    },
+
+    _decide: function (sysId, comments, approving) {
+        var userId = gs.getUserID();
+        if (!userId) throw this._error(401, 'not_authenticated', 'You must be logged in.');
+
+        var gr = new GlideRecord(this.LV_APP);
+        if (!gr.get(sysId)) throw this._error(404, 'not_found', 'Leave request not found.');
+
+        var empGr = new GlideRecord(this.EMP_TABLE);
+        if (!empGr.get(gr.getValue('employee'))) throw this._error(500, 'data_error', 'The employee on this request could not be found.');
+        var employeeUserId = empGr.getValue('user');
+        if (employeeUserId === userId)
+            throw this._error(403, 'forbidden', 'You cannot approve or reject your own leave request.');
+
+        var ctx = this._resolveContext(gr.getValue('employee'), employeeUserId, gr.getValue('leave_type'));
+        var status = gr.getValue('status');
+        var now = new GlideDateTime().getDisplayValue();
+        var nextStatus;
+
+        if (status === 'pending') {
+            if (ctx.managerId !== userId)
+                throw this._error(403, 'forbidden', 'You are not the assigned manager for this request.');
+            gr.setValue('approver', userId);
+            gr.setValue('approval_date', now);
+            gr.setValue('approver_comments', comments);
+            if (!approving) {
+                nextStatus = 'rejected';
+            } else if (ctx.deptHeadId && ctx.deptHeadId === ctx.managerId) {
+                // Manager is also the Department Head for this employee: complete that stage automatically.
+                gr.setValue('dept_approver', userId);
+                gr.setValue('dept_approval_date', now);
+                gr.setValue('dept_comments', '(Automatically completed - the manager is also the Department Head for this employee.)');
+                nextStatus = ctx.requiresHr ? 'dept_approved' : 'approved';
+            } else {
+                nextStatus = 'mgr_approved';
+            }
+        } else if (status === 'mgr_approved') {
+            if (ctx.deptHeadId) {
+                if (ctx.deptHeadId !== userId)
+                    throw this._error(403, 'forbidden', 'You are not the assigned Department Head for this request.');
+            } else if (!gs.hasRole(this.ROLE_HR) && !gs.hasRole(this.ROLE_ERP_ADMIN)) {
+                throw this._error(403, 'forbidden', 'No Department Head is configured for this employee\'s department. Only HR can act on this stage until it is configured.');
+            }
+            gr.setValue('dept_approver', userId);
+            gr.setValue('dept_approval_date', now);
+            gr.setValue('dept_comments', comments + (ctx.deptHeadId ? '' : ' (Department Head not configured - reviewed by HR as a fallback.)'));
+            nextStatus = !approving ? 'rejected' : (ctx.requiresHr ? 'dept_approved' : 'approved');
+        } else if (status === 'dept_approved') {
+            if (!gs.hasRole(this.ROLE_HR) && !gs.hasRole(this.ROLE_ERP_ADMIN))
+                throw this._error(403, 'forbidden', 'You are not authorized to provide the final HR approval for this request.');
+            gr.setValue('hr_reviewer', userId);
+            gr.setValue('hr_review_date', now);
+            gr.setValue('hr_comments', comments);
+            nextStatus = approving ? 'approved' : 'rejected';
+        } else {
+            throw this._error(409, 'invalid_state', 'This request is not awaiting your decision at this time (current status: ' + status + ').');
+        }
+
+        gr.setValue('status', nextStatus);
+        if (!gr.update()) throw this._error(500, 'update_failed', gr.getLastErrorMessage() || 'Unable to save this decision.');
+
+        this._notify(gr, nextStatus, ctx);
+        return this._decorate(gr, userId);
+    },
+
+    _getCallerEmployee: function () {
+        var userId = gs.getUserID();
+        if (!userId) throw this._error(401, 'not_authenticated', 'You must be logged in.');
+        var emp = this._findEmployeeByUser(userId);
+        if (!emp)
+            throw this._error(403, 'no_employee_profile', 'Your account is not linked to a BJIT employee profile. Please contact HR or the BJIT ERP administrator.');
+        return emp;
+    },
+
+    _findEmployeeByUser: function (userId) {
+        var empGr = new GlideRecord(this.EMP_TABLE);
+        empGr.addQuery('user', userId);
+        empGr.orderBy('sys_created_on');
+        empGr.setLimit(1);
+        empGr.query();
+        if (!empGr.next()) return null;
+        if (this.INACTIVE_STATUSES.indexOf(empGr.getValue('employment_status')) !== -1)
+            throw this._error(403, 'employee_inactive', 'Your employee profile is currently inactive. Please contact HR for assistance.');
+        return { sysId: empGr.getUniqueValue(), userId: userId, number: empGr.getValue('number'), name: empGr.user.getDisplayValue() };
+    },
+
+    // Resolves the direct manager and Department Head for an employee from existing org data (no stored snapshot).
+    _resolveContext: function (empSysId, employeeUserId, leaveTypeId) {
+        var ctx = { managerId: '', managerName: '', deptHeadId: '', deptHeadName: '', department: '', requiresHr: false };
+        var empGr = new GlideRecord(this.EMP_TABLE);
+        if (!empGr.get(empSysId)) return ctx;
+        if (!employeeUserId) employeeUserId = empGr.getValue('user');
+        ctx.managerId = empGr.user.manager.toString();
+        ctx.managerName = empGr.user.manager.getDisplayValue();
+
+        if (empGr.getValue('designation')) {
+            var desgnGr = new GlideRecord(this.DESGN_TABLE);
+            if (desgnGr.get(empGr.getValue('designation')) && desgnGr.getValue('department')) {
+                var deptGr = new GlideRecord('cmn_department');
+                if (deptGr.get(desgnGr.getValue('department'))) {
+                    ctx.department = deptGr.getValue('name');
+                    ctx.deptHeadId = deptGr.dept_head.toString();
+                    ctx.deptHeadName = deptGr.dept_head.getDisplayValue();
+                }
+            }
+        }
+        if (leaveTypeId) {
+            var ltGr = new GlideRecord(this.LV_TYPE);
+            if (ltGr.get(leaveTypeId)) ctx.requiresHr = ltGr.getValue('requires_hr') === '1';
+        }
+        return ctx;
+    },
+
+    _decorate: function (gr, viewerUserId) {
+        var ctx = this._resolveContext(gr.getValue('employee'), null, gr.getValue('leave_type'));
+        return {
+            sys_id: gr.getUniqueValue(),
+            number: gr.getValue('number'),
+            status: { value: gr.getValue('status'), display: gr.getDisplayValue('status') },
+            employee: { sys_id: gr.getValue('employee'), name: gr.employee.getDisplayValue(), number: gr.employee.number.toString() },
+            leave_type: { sys_id: gr.getValue('leave_type'), name: gr.leave_type.getDisplayValue() },
+            start_date: gr.getValue('start_date'),
+            end_date: gr.getValue('end_date'),
+            duration: gr.getValue('duration'),
+            reason: gr.getValue('reason'),
+            manager: { sys_id: ctx.managerId, name: ctx.managerName },
+            approver: gr.getValue('approver') ? { sys_id: gr.getValue('approver'), name: gr.approver.getDisplayValue() } : null,
+            approval_date: gr.getValue('approval_date'),
+            approver_comments: gr.getValue('approver_comments'),
+            department: ctx.department,
+            dept_head: ctx.deptHeadId ? { sys_id: ctx.deptHeadId, name: ctx.deptHeadName } : null,
+            dept_head_fallback_to_hr: !ctx.deptHeadId,
+            dept_approver: gr.getValue('dept_approver') ? { sys_id: gr.getValue('dept_approver'), name: gr.dept_approver.getDisplayValue() } : null,
+            dept_approval_date: gr.getValue('dept_approval_date'),
+            dept_comments: gr.getValue('dept_comments'),
+            requires_hr: ctx.requiresHr,
+            hr_reviewer: gr.getValue('hr_reviewer') ? { sys_id: gr.getValue('hr_reviewer'), name: gr.hr_reviewer.getDisplayValue() } : null,
+            hr_review_date: gr.getValue('hr_review_date'),
+            hr_comments: gr.getValue('hr_comments')
+        };
+    },
+
+    _notify: function (gr, eventName, ctx) {
+        try { gs.eventQueue('x_2316161_bjit_e_0.leave.' + eventName, gr, ctx && ctx.managerId, ctx && ctx.deptHeadId); }
+        catch (e) { gs.warn('BJIT leave notification event failed: ' + e); }
+    },
+
+    _error: function (status, code, message) {
+        return { status: status, code: code, message: message };
+    },
+
+    type: 'BjitLeaveApproval'
+};
+    ]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 02:00:00</sys_created_on>
+        <sys_id>638b8eaddbce4af1b6b9b1b69c81a43b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BjitLeaveApproval</sys_name>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_script_include_638b8eaddbce4af1b6b9b1b69c81a43b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 02:00:00</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>true</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>POST</http_method>
+        <name>create</name>
+        <operation_script><![CDATA[
+(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    response.setContentType('application/json');
+    try {
+        var body = request.body.data || {};
+        var result = new x_2316161_bjit_e_0.BjitAccountProvisioning().createAccount(body);
+        response.setStatus(200);
+        response.setBody(result);
+    } catch (e) {
+        if (e && e.status && e.code) {
+            response.setStatus(e.status);
+            response.setBody({ code: e.code, message: e.message });
+        } else {
+            gs.error('BJIT accounts create failed: ' + e);
+            response.setStatus(500);
+            response.setBody({ code: 'create_failed', message: 'Unable to create the account. Please try again.' });
+        }
+    }
+})(request, response);
+        ]]></operation_script>
+        <operation_uri>/api/x_2316161_bjit_e_0/accounts/create</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>true</produces_customized>
+        <relative_path>/create</relative_path>
+        <request_example/>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>false</requires_snc_internal_role>
+        <short_description>HR/ERP-admin-only: creates a new ServiceNow account with a one-time temporary password and forced change at first login.</short_description>
+        <support_trailing_slash>false</support_trailing_slash>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 04:00:00</sys_created_on>
+        <sys_id>e30870b97372402cad70a26c84b2c8bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>create</sys_name>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_ws_operation_e30870b97372402cad70a26c84b2c8bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 04:00:00</sys_updated_on>
+        <web_service_definition display_value="BJIT Account Provisioning">f068b796c1dc4bcdb0c954ede4395134</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

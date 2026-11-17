@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_2316161_bjit_e_0.BjitAccountProvisioning</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>HR/ERP-admin-only employee account provisioning: lists accounts needing attention, creates new ServiceNow accounts for new hires, and resets passwords for existing linked accounts. Uses the platform's own password-reset mechanism (password_needs_reset) rather than a custom auth scheme. Temporary passwords are generated here and returned once; they are never stored or logged.</description>
+        <mobile_callable>false</mobile_callable>
+        <name>BjitAccountProvisioning</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[
+var BjitAccountProvisioning = Class.create();
+BjitAccountProvisioning.prototype = {
+    EMP_TABLE: 'x_2316161_bjit_e_0_emp',
+    ROLE_HR: 'x_2316161_bjit_e_0.hr_admin',
+    ROLE_ERP_ADMIN: 'x_2316161_bjit_e_0.erp_admin',
+    ROLE_EMPLOYEE: 'x_2316161_bjit_e_0.employee',
+
+    initialize: function () {},
+
+    _requireAdmin: function () {
+        if (!gs.hasRole(this.ROLE_HR) && !gs.hasRole(this.ROLE_ERP_ADMIN))
+            throw this._error(403, 'forbidden', 'You do not have permission to manage employee accounts.');
+    },
+
+    // Employees whose account needs attention (inactive), plus active sys_user accounts
+    // not yet linked to any employee profile (onboarding candidates).
+    listAccountStatus: function () {
+        this._requireAdmin();
+        var employees = [];
+        var empGr = new GlideRecord(this.EMP_TABLE);
+        empGr.query();
+        while (empGr.next()) {
+            employees.push({
+                emp_sys_id: empGr.getUniqueValue(),
+                number: empGr.getValue('number'),
+                name: empGr.user.getDisplayValue(),
+                user_sys_id: empGr.getValue('user'),
+                employment_status: empGr.getValue('employment_status'),
+                user_active: empGr.user.active.toString() === 'true',
+                password_needs_reset: empGr.user.password_needs_reset.toString() === 'true',
+                locked_out: empGr.user.locked_out.toString() === 'true'
+            });
+        }
+
+        var linkedUserIds = {};
+        empGr.query();
+        while (empGr.next()) linkedUserIds[empGr.getValue('user')] = true;
+
+        var unlinkedUsers = [];
+        var userGr = new GlideRecord('sys_user');
+        userGr.addQuery('active', true);
+        userGr.orderBy('user_name');
+        userGr.query();
+        while (userGr.next()) {
+            if (linkedUserIds[userGr.getUniqueValue()]) continue;
+            unlinkedUsers.push({
+                sys_id: userGr.getUniqueValue(),
+                user_name: userGr.getValue('user_name'),
+                name: userGr.getDisplayValue()
+            });
+        }
+
+        return { employees: employees, unlinkedUsers: unlinkedUsers };
+    },
+
+    // Creates a brand-new ServiceNow account for a new hire, with a random temporary
+    // password and a forced change at first login. Optionally links it to a new Employee
+    // profile in the same step.
+    createAccount: function (fields) {
+        this._requireAdmin();
+        fields = fields || {};
+        if (!fields.user_name || !fields.first_name || !fields.last_name)
+            throw this._error(400, 'missing_fields', 'Username, first name and last name are required.');
+
+        var existing = new GlideRecord('sys_user');
+        existing.addQuery('user_name', fields.user_name);
+        existing.query();
+        if (existing.next())
+            throw this._error(409, 'duplicate_user', 'A ServiceNow account with this username already exists.');
+
+        var tempPassword = this._generateTempPassword();
+        var u = new GlideRecord('sys_user');
+        u.initialize();
+        u.setValue('user_name', fields.user_name);
+        u.setValue('first_name', fields.first_name);
+        u.setValue('last_name', fields.last_name);
+        if (fields.email) u.setValue('email', fields.email);
+        u.setValue('active', true);
+        u.setValue('locked_out', false);
+        u.setValue('password_needs_reset', true);
+        u.user_password.setDisplayValue(tempPassword);
+        var userId = u.insert();
+        if (!userId) throw this._error(500, 'create_failed', u.getLastErrorMessage() || 'Unable to create the account.');
+
+        this._grantRole(userId, this.ROLE_EMPLOYEE);
+
+        var empId = '';
+        if (fields.joining_date) {
+            var e = new GlideRecord(this.EMP_TABLE);
+            e.initialize();
+            e.setValue('user', userId);
+            e.setValue('employment_status', 'active');
+            e.setValue('employment_type', fields.employment_type || 'full_time');
+            e.setValue('joining_date', fields.joining_date);
+            if (fields.designation) e.setValue('designation', fields.designation);
+            empId = e.insert();
+        }
+
+        return { user_sys_id: userId, emp_sys_id: empId, temporary_password: tempPassword };
+    },
+
+    // Resets the password for an employee's existing linked account and forces a change at next login.
+    resetPassword: function (empSysId) {
+        this._requireAdmin();
+        var empGr = new GlideRecord(this.EMP_TABLE);
+        if (!empGr.get(empSysId)) throw this._error(404, 'not_found', 'Employee not found.');
+        var userId = empGr.getValue('user');
+        if (!userId) throw this._error(409, 'no_user', 'This employee has no linked ServiceNow account.');
+
+        var tempPassword = this._generateTempPassword();
+        var u = new GlideRecord('sys_user');
+        if (!u.get(userId)) throw this._error(404, 'not_found', 'Linked ServiceNow account not found.');
+        u.user_password.setDisplayValue(tempPassword);
+        u.setValue('password_needs_reset', true);
+        u.setValue('locked_out', false);
+        if (!u.update()) throw this._error(500, 'reset_failed', u.getLastErrorMessage() || 'Unable to reset the password.');
+
+        return { user_sys_id: userId, temporary_password: tempPassword };
+    },
+
+    _grantRole: function (userId, roleName) {
+        var roleGr = new GlideRecord('sys_user_role');
+        roleGr.addQuery('name', roleName);
+        roleGr.query();
+        if (!roleGr.next()) return;
+        var grant = new GlideRecord('sys_user_has_role');
+        grant.initialize();
+        grant.setValue('user', userId);
+        grant.setValue('role', roleGr.getUniqueValue());
+        grant.insert();
+    },
+
+    // Cryptographically random, unique per account - never a shared default like "1234".
+    _generateTempPassword: function () {
+        var alphabet = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%';
+        var entropy = (gs.generateGUID() + gs.generateGUID()).replace(/-/g, '');
+        var out = 'Bjit-';
+        for (var i = 0; i < 12; i++) {
+            var code = entropy.charCodeAt(i) + entropy.charCodeAt(i + 12);
+            out += alphabet.charAt(code % alphabet.length);
+        }
+        return out;
+    },
+
+    _error: function (status, code, message) {
+        return { status: status, code: code, message: message };
+    },
+
+    type: 'BjitAccountProvisioning'
+};
+    ]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 04:00:00</sys_created_on>
+        <sys_id>bfa5f6463e154ef2a51e83af73199b17</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BjitAccountProvisioning</sys_name>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_script_include_bfa5f6463e154ef2a51e83af73199b17</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 04:00:00</sys_updated_on>
+    </sys_script_include>
+</record_update>

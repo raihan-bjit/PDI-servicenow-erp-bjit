@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>true</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl/>
+        <http_method>GET</http_method>
+        <name>my-queue</name>
+        <operation_script><![CDATA[
+(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    response.setContentType('application/json');
+    try {
+        if (!gs.hasRole('x_2316161_bjit_e_0.employee'))
+            throw { status: 403, code: 'forbidden', message: 'You do not have permission to view leave approvals.' };
+        var result = new x_2316161_bjit_e_0.BjitLeaveApproval().myQueue();
+        response.setStatus(200);
+        response.setBody(result);
+    } catch (e) {
+        if (e && e.status && e.code) {
+            response.setStatus(e.status);
+            response.setBody({ code: e.code, message: e.message });
+        } else {
+            gs.error('BJIT leave my-queue failed: ' + e);
+            response.setStatus(500);
+            response.setBody({ code: 'queue_failed', message: 'Unable to load leave approvals. Please try again.' });
+        }
+    }
+})(request, response);
+        ]]></operation_script>
+        <operation_uri>/api/x_2316161_bjit_e_0/leave/my-queue</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>true</produces_customized>
+        <relative_path>/my-queue</relative_path>
+        <request_example/>
+        <requires_acl_authorization>false</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>false</requires_snc_internal_role>
+        <short_description>Returns the caller's own leave requests plus items awaiting their decision at each stage.</short_description>
+        <support_trailing_slash>false</support_trailing_slash>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 02:00:00</sys_created_on>
+        <sys_id>7f95b46322b6475fa5580667bbc56f9b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>my-queue</sys_name>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_ws_operation_7f95b46322b6475fa5580667bbc56f9b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 02:00:00</sys_updated_on>
+        <web_service_definition display_value="BJIT Leave Approval">5175acd795ff4fa3a62169b5dc8618bd</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
