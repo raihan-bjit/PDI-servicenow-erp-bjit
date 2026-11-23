@@ -11,6 +11,7 @@
             </choice>
         </element>
         <element label="Joining Date" mandatory="true" name="joining_date" type="glide_date"/>
+        <element label="Assigned Shift" name="shift" reference="x_2316161_bjit_e_0_shift" type="reference"/>
         <element label="Blood Group" name="blood_group" type="choice">
             <choice>
                 <element inactive_on_update="false" label="O-" sequence="8" value="o_neg"/>
@@ -35,6 +36,7 @@
                 <element inactive_on_update="false" label="Single" sequence="1" value="single"/>
             </choice>
         </element>
+        <element label="Office Start Time" name="office_start" type="glide_time"/>
         <element label="User Account" mandatory="true" name="user" reference="sys_user" type="reference"/>
         <element label="National ID" max_length="40" name="national_id" type="string"/>
         <element label="Termination Date" name="termination_date" type="glide_date"/>
@@ -49,13 +51,19 @@
             </choice>
         </element>
         <element label="Personal Email" name="personal_email" type="email"/>
+        <element label="Office End Time" name="office_end" type="glide_time"/>
         <element label="Designation" name="designation" reference="x_2316161_bjit_e_0_desgn" type="reference"/>
+        <element label="Grace Period (minutes)" name="emp_grace_period" type="integer"/>
+        <element default="true" label="Schedule Active" name="schedule_active" type="boolean"/>
         <element label="Emergency Contact Phone" max_length="40" name="emergency_phone" type="string"/>
         <element label="Notes" name="notes" type="journal_input"/>
         <index name="index">
             <element name="designation"/>
         </index>
-        <index name="index2" unique="true">
+        <index name="index2">
+            <element name="shift"/>
+        </index>
+        <index name="index3" unique="true">
             <element name="user"/>
         </index>
     </element>

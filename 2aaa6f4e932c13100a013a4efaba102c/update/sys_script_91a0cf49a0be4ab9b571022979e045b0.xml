@@ -29,26 +29,56 @@
         <role_conditions/>
         <script><![CDATA[
 (function executeRule(current, previous) {
-    // glide_time values are stored as '1970-01-01 HH:MM:SS' (UTC), so read only the time of day.
-    function secondsOfDay(value) {
-        var m = /(\d{1,2}):(\d{2})(?::(\d{2}))?\s*$/.exec(String(value || ''));
-        return m ? parseInt(m[1], 10) * 3600 + parseInt(m[2], 10) * 60 + parseInt(m[3] || '0', 10) : null;
+    var checkIn = current.getValue('check_in');
+    if (!checkIn) { current.setValue('is_late', false); current.setValue('late_minutes', 0); return; }
+
+    var workStart = '';
+    var gracePeriod = 0;
+
+    // Priority 1: Employee's assigned shift package
+    var empGr = new GlideRecord('x_2316161_bjit_e_0_emp');
+    if (empGr.get(current.getValue('employee'))) {
+        var shiftId = empGr.getValue('shift');
+        if (shiftId) {
+            var shiftGr = new GlideRecord('x_2316161_bjit_e_0_shift');
+            if (shiftGr.get(shiftId) && shiftGr.getValue('active') == '1') {
+                workStart = shiftGr.getValue('start_time');
+                gracePeriod = parseInt(shiftGr.getValue('grace_period') || '0', 10);
+            }
+        }
+        // Priority 2: Employee individual schedule (backward compat)
+        if (!workStart) {
+            var empStart = empGr.getValue('office_start');
+            if (empStart) {
+                workStart = empStart;
+                gracePeriod = parseInt(empGr.getValue('emp_grace_period') || '0', 10);
+            }
+        }
     }
 
-    var inSeconds = secondsOfDay(current.getValue('check_in'));
-    if (inSeconds === null) return;
+    // Priority 3: Global config
+    if (!workStart) {
+        var configGr = new GlideRecord('x_2316161_bjit_e_0_att_cfg');
+        configGr.addQuery('active', true);
+        configGr.setLimit(1);
+        configGr.query();
+        if (!configGr.next()) { current.setValue('is_late', false); current.setValue('late_minutes', 0); return; }
+        workStart = configGr.getValue('work_start');
+        gracePeriod = parseInt(configGr.getValue('grace_period') || '0', 10);
+    }
 
-    var configGr = new GlideRecord('x_2316161_bjit_e_0_att_cfg');
-    configGr.addQuery('active', true);
-    configGr.setLimit(1);
-    configGr.query();
-    if (!configGr.next()) return;
-
-    var startSeconds = secondsOfDay(configGr.getValue('work_start'));
-    var gracePeriod = parseInt(configGr.getValue('grace_period') || '0', 10);
-
-    if (startSeconds !== null)
-        current.setValue('is_late', inSeconds > (startSeconds + gracePeriod * 60));
+    if (workStart) {
+        var startParts = workStart.split(':');
+        var inParts = checkIn.split(':');
+        var startMinutes = parseInt(startParts[0], 10) * 60 + parseInt(startParts[1], 10);
+        var inMinutes = parseInt(inParts[0], 10) * 60 + parseInt(inParts[1], 10);
+        var lateBy = inMinutes - (startMinutes + gracePeriod);
+        current.setValue('is_late', lateBy > 0);
+        current.setValue('late_minutes', lateBy > 0 ? lateBy : 0);
+    } else {
+        current.setValue('is_late', false);
+        current.setValue('late_minutes', 0);
+    }
 })(current, previous);
     ]]></script>
         <sys_class_name>sys_script</sys_class_name>

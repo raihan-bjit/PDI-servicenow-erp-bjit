@@ -34,9 +34,30 @@
     var prevStatus = previous ? previous.getValue('status') : '';
     if (status === prevStatus) return;
 
-    // Approver/stage-reviewer identity and timestamps are set explicitly by BjitLeaveApproval
-    // before this record is saved; this rule only maintains the leave balance.
+    if (status === 'mgr_approved' && prevStatus === 'pending') {
+        current.setValue('approver', gs.getUserID());
+        current.setValue('approval_date', new GlideDateTime().getDisplayValue());
+        
+        // Check if HR review needed
+        var ltGr = new GlideRecord('x_2316161_bjit_e_0_lv_type');
+        if (ltGr.get(current.getValue('leave_type'))) {
+            if (ltGr.getValue('requires_hr') != '1') {
+                current.setValue('status', 'approved');
+            }
+        }
+    }
+    
     if (status === 'approved' && prevStatus !== 'approved') {
+        if (!current.getValue('approver')) {
+            current.setValue('approver', gs.getUserID());
+            current.setValue('approval_date', new GlideDateTime().getDisplayValue());
+        }
+        // If approved by HR reviewer
+        if (prevStatus === 'mgr_approved') {
+            current.setValue('hr_reviewer', gs.getUserID());
+            current.setValue('hr_review_date', new GlideDateTime().getDisplayValue());
+        }
+        
         // Update leave balance - add to used, subtract from remaining
         var duration = parseFloat(current.getValue('duration') || '0');
         var year = new GlideDateTime().getYearLocalTime();
@@ -58,6 +79,13 @@
     }
     
     if (status === 'rejected') {
+        if (prevStatus === 'pending') {
+            current.setValue('approver', gs.getUserID());
+            current.setValue('approval_date', new GlideDateTime().getDisplayValue());
+        } else if (prevStatus === 'mgr_approved') {
+            current.setValue('hr_reviewer', gs.getUserID());
+            current.setValue('hr_review_date', new GlideDateTime().getDisplayValue());
+        }
         // Remove from pending
         var dur = parseFloat(current.getValue('duration') || '0');
         var yr = new GlideDateTime().getYearLocalTime();

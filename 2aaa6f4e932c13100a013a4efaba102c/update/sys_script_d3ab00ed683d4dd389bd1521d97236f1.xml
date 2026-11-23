@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_2316161_bjit_e_0_ho_req</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_2316161_bjit_e_0_ho_req">statusVALCHANGES<item endquery="false" field="status" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>BJIT ERP - Home Office Approval Flow</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[
+(function executeRule(current, previous) {
+    var status = current.getValue('status');
+    var prevStatus = previous ? previous.getValue('status') : '';
+    if (status === prevStatus) return;
+
+    var now = new GlideDateTime().getDisplayValue();
+
+    // Manager approves -> moves to dept head
+    if (status === 'pending_dh' && prevStatus === 'pending_mgr') {
+        current.setValue('mgr_decision', 'approved');
+        current.setValue('mgr_decision_date', now);
+        current.setValue('manager', gs.getUserID());
+    }
+
+    // Dept head approves -> final approval
+    if (status === 'approved' && prevStatus === 'pending_dh') {
+        current.setValue('dh_decision', 'approved');
+        current.setValue('dh_decision_date', now);
+        current.setValue('dept_head', gs.getUserID());
+
+        // If equipment needed, set equipment_status to pending_review
+        if (current.getValue('equipment_needed') == '1') {
+            current.setValue('equipment_status', 'pending_review');
+        }
+    }
+
+    // Rejected from pending_mgr
+    if (status === 'rejected' && prevStatus === 'pending_mgr') {
+        current.setValue('mgr_decision', 'rejected');
+        current.setValue('mgr_decision_date', now);
+        current.setValue('manager', gs.getUserID());
+    }
+
+    // Rejected from pending_dh
+    if (status === 'rejected' && prevStatus === 'pending_dh') {
+        current.setValue('dh_decision', 'rejected');
+        current.setValue('dh_decision_date', now);
+        current.setValue('dept_head', gs.getUserID());
+    }
+})(current, previous);
+    ]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-17 04:49:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d3ab00ed683d4dd389bd1521d97236f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BJIT ERP - Home Office Approval Flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+        <sys_update_name>sys_script_d3ab00ed683d4dd389bd1521d97236f1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-17 04:49:30</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=d3ab00ed683d4dd389bd1521d97236f1"/>
+</record_update>

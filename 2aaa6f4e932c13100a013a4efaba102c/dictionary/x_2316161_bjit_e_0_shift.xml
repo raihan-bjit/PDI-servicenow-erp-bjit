@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="4f5cd7c514a744f4b064191fcc52818e" label="Shift Package" name="x_2316161_bjit_e_0_shift" type="collection">
+        <element label="Overnight Shift" name="overnight" type="boolean"/>
+        <element label="Effective From" name="effective_from" type="glide_date"/>
+        <element default="monday,tuesday,wednesday,thursday,friday" label="Working Days" max_length="100" name="working_days" type="string"/>
+        <element label="Effective To" name="effective_to" type="glide_date"/>
+        <element default="0" label="Grace Period (minutes)" name="grace_period" type="integer"/>
+        <element label="End Time" mandatory="true" name="end_time" type="glide_time"/>
+        <element label="Start Time" mandatory="true" name="start_time" type="glide_time"/>
+        <element default="true" label="Active" name="active" type="boolean"/>
+        <element display="true" label="Shift Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element label="Shift Code" mandatory="true" max_length="20" name="code" type="string"/>
+        <element label="Description" max_length="500" name="description" type="string"/>
+        <index name="index" unique="true">
+            <element name="code"/>
+        </index>
+    </element>
+</database>

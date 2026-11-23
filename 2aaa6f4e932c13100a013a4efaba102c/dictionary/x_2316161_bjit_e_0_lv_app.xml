@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="33a1c6d65cda4b908a057be5b1638a2e" label="Leave Application" name="x_2316161_bjit_e_0_lv_app" type="collection">
-        <element label="Start Date" mandatory="true" name="start_date" type="glide_date"/>
+        <element label="Start Date" mandatory="true" max_length="40" name="start_date" type="glide_date"/>
         <element default="javascript:global.getNextObjNumberPadded();" display="true" label="Leave Number" mandatory="true" max_length="40" name="number" type="string"/>
-        <element label="Approval Date" name="approval_date" read_only="true" read_only_option="instance_configured" type="glide_date_time"/>
+        <element label="Approval Date" max_length="40" name="approval_date" read_only="true" read_only_option="instance_configured" type="glide_date_time"/>
         <element label="Approver Comments" max_length="1000" name="approver_comments" type="string"/>
         <element attributes="scale=1" label="Duration (days)" name="duration" read_only="true" read_only_option="instance_configured" type="decimal"/>
-        <element label="Work Notes" name="work_notes" type="journal_input"/>
-        <element label="Approver" name="approver" reference="sys_user" type="reference"/>
-        <element label="Employee" mandatory="true" name="employee" reference="x_2316161_bjit_e_0_emp" type="reference"/>
-        <element label="HR Reviewer" name="hr_reviewer" reference="sys_user" type="reference"/>
-        <element label="HR Review Date" name="hr_review_date" read_only="true" read_only_option="instance_configured" type="glide_date_time"/>
-        <element default="pending" label="Status" mandatory="true" name="status" type="choice">
+        <element label="Work Notes" max_length="40" name="work_notes" type="journal_input"/>
+        <element label="Approver" max_length="32" name="approver" reference="sys_user" type="reference"/>
+        <element label="Employee" mandatory="true" max_length="32" name="employee" reference="x_2316161_bjit_e_0_emp" type="reference"/>
+        <element label="HR Reviewer" max_length="32" name="hr_reviewer" reference="sys_user" type="reference"/>
+        <element label="Department Head Approval Date" max_length="40" name="dept_approval_date" read_only="true" read_only_option="instance_configured" type="glide_date_time"/>
+        <element label="HR Review Date" max_length="40" name="hr_review_date" read_only="true" read_only_option="instance_configured" type="glide_date_time"/>
+        <element default="pending" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Approved" sequence="4" value="approved"/>
                 <element inactive_on_update="false" label="Manager Approved" sequence="3" value="mgr_approved"/>
@@ -20,20 +21,25 @@
                 <element inactive_on_update="false" label="Cancelled" sequence="6" value="cancelled"/>
             </choice>
         </element>
-        <element label="End Date" mandatory="true" name="end_date" type="glide_date"/>
+        <element label="End Date" mandatory="true" max_length="40" name="end_date" type="glide_date"/>
         <element label="HR Comments" max_length="1000" name="hr_comments" type="string"/>
         <element label="Reason" mandatory="true" max_length="1000" name="reason" type="string"/>
-        <element label="Leave Type" mandatory="true" name="leave_type" reference="x_2316161_bjit_e_0_lv_type" type="reference"/>
+        <element label="Department Head Comments" max_length="1000" name="dept_comments" type="string"/>
+        <element label="Leave Type" mandatory="true" max_length="32" name="leave_type" reference="x_2316161_bjit_e_0_lv_type" type="reference"/>
+        <element label="Department Head Approver" max_length="32" name="dept_approver" reference="sys_user" type="reference"/>
         <index name="index">
             <element name="approver"/>
         </index>
         <index name="index2">
-            <element name="employee"/>
+            <element name="dept_approver"/>
         </index>
         <index name="index3">
-            <element name="hr_reviewer"/>
+            <element name="employee"/>
         </index>
         <index name="index4">
+            <element name="hr_reviewer"/>
+        </index>
+        <index name="index5">
             <element name="leave_type"/>
         </index>
     </element>

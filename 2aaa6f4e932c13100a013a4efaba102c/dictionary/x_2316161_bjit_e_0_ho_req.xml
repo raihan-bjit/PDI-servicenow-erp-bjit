@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="deea33e0a40d4958979b4b98a52f9edf" label="Home Office Request" name="x_2316161_bjit_e_0_ho_req" type="collection">
+        <element label="Employee" mandatory="true" name="employee" reference="x_2316161_bjit_e_0_emp" type="reference"/>
+        <element label="Dept Head Decision Date" name="dh_decision_date" type="glide_date_time"/>
+        <element label="End Date" mandatory="true" name="end_date" type="glide_date"/>
+        <element default="pending" label="Dept Head Decision" name="dh_decision" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
+                <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
+            </choice>
+        </element>
+        <element label="Start Date" mandatory="true" name="start_date" type="glide_date"/>
+        <element default="javascript:global.getNextObjNumberPadded();" display="true" label="Request Number" mandatory="true" max_length="40" name="number" type="string"/>
+        <element label="Reason" mandatory="true" max_length="2000" name="reason" type="string"/>
+        <element label="Manager" name="manager" reference="sys_user" type="reference"/>
+        <element label="Dept Head Comments" max_length="1000" name="dh_comments" type="string"/>
+        <element label="Work Notes" name="notes" type="journal_input"/>
+        <element label="Manager Decision Date" name="mgr_decision_date" type="glide_date_time"/>
+        <element label="Equipment Assistance Needed" name="equipment_needed" type="boolean"/>
+        <element label="Department Head" name="dept_head" reference="sys_user" type="reference"/>
+        <element label="Equipment Details" max_length="2000" name="equipment_details" type="string"/>
+        <element label="Manager Comments" max_length="1000" name="mgr_comments" type="string"/>
+        <element default="pending" label="Manager Decision" name="mgr_decision" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
+                <element inactive_on_update="false" label="Pending" sequence="1" value="pending"/>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
+            </choice>
+        </element>
+        <element default="pending_mgr" label="Status" mandatory="true" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Approved" sequence="3" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="4" value="rejected"/>
+                <element inactive_on_update="false" label="Pending Dept Head Approval" sequence="2" value="pending_dh"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="5" value="cancelled"/>
+                <element inactive_on_update="false" label="Pending Manager Approval" sequence="1" value="pending_mgr"/>
+            </choice>
+        </element>
+        <element default="not_required" label="Equipment Status" name="equipment_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Fulfilled" sequence="5" value="fulfilled"/>
+                <element inactive_on_update="false" label="Rejected" sequence="7" value="rejected"/>
+                <element inactive_on_update="false" label="Pending Review" sequence="2" value="pending_review"/>
+                <element inactive_on_update="false" label="Approved for Fulfillment" sequence="3" value="approved_fulfillment"/>
+                <element inactive_on_update="false" label="In Progress" sequence="4" value="in_progress"/>
+                <element inactive_on_update="false" label="Not Required" sequence="1" value="not_required"/>
+                <element inactive_on_update="false" label="Unavailable" sequence="6" value="unavailable"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="dept_head"/>
+        </index>
+        <index name="index2">
+            <element name="employee"/>
+        </index>
+        <index name="index3">
+            <element name="manager"/>
+        </index>
+    </element>
+</database>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element audit="true" db_object_id="c4c2f78f98ac42b99f22135765807343" label="Attendance Record" name="x_2316161_bjit_e_0_attend" type="collection">
         <element attributes="scale=2" default="0" label="Overtime Hours" name="overtime_hours" read_only="true" read_only_option="instance_configured" type="decimal"/>
+        <element default="0" label="Late Minutes" name="late_minutes" read_only="true" read_only_option="instance_configured" type="integer"/>
         <element label="Remarks" max_length="500" name="remarks" type="string"/>
         <element label="Early Departure" name="is_early_dept" read_only="true" read_only_option="instance_configured" type="boolean"/>
         <element default="manual" label="Source" name="source" type="choice">

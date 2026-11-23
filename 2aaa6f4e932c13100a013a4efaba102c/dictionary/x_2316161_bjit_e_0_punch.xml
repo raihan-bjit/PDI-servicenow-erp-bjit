@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="cb18fb029d4449ed8db5fc5a708168dc" label="Punch Event" name="x_2316161_bjit_e_0_punch" type="collection">
+    <element audit="true" db_object_id="cb18fb029d4449ed8db5fc5a708168dc" label="Punch Event" name="x_2316161_bjit_e_0_punch" type="collection">
         <element default="virtual" label="Source" name="source" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Virtual Punch" sequence="1" value="virtual"/>

@@ -29,26 +29,38 @@
         <role_conditions/>
         <script><![CDATA[
 (function executeRule(current, previous) {
-    // glide_time values are stored as '1970-01-01 HH:MM:SS' (UTC), so read only the time of day.
-    function secondsOfDay(value) {
-        var m = /(\d{1,2}):(\d{2})(?::(\d{2}))?\s*$/.exec(String(value || ''));
-        return m ? parseInt(m[1], 10) * 3600 + parseInt(m[2], 10) * 60 + parseInt(m[3] || '0', 10) : null;
+    var checkOut = current.getValue('check_out');
+    if (!checkOut) return;
+
+    var workEnd = '';
+    var earlyThreshold = 0;
+
+    var empGr = new GlideRecord('x_2316161_bjit_e_0_emp');
+    if (empGr.get(current.getValue('employee'))) {
+        var empEnd = empGr.getValue('office_end');
+        if (empEnd) {
+            workEnd = empEnd;
+            earlyThreshold = 30; // default threshold
+        }
     }
 
-    var outSeconds = secondsOfDay(current.getValue('check_out'));
-    if (outSeconds === null) return;
+    if (!workEnd) {
+        var configGr = new GlideRecord('x_2316161_bjit_e_0_att_cfg');
+        configGr.addQuery('active', true);
+        configGr.setLimit(1);
+        configGr.query();
+        if (!configGr.next()) return;
+        workEnd = configGr.getValue('work_end');
+        earlyThreshold = parseInt(configGr.getValue('early_depart') || '0', 10);
+    }
 
-    var configGr = new GlideRecord('x_2316161_bjit_e_0_att_cfg');
-    configGr.addQuery('active', true);
-    configGr.setLimit(1);
-    configGr.query();
-    if (!configGr.next()) return;
-
-    var endSeconds = secondsOfDay(configGr.getValue('work_end'));
-    var earlyThreshold = parseInt(configGr.getValue('early_depart') || '0', 10);
-
-    if (endSeconds !== null)
-        current.setValue('is_early_dept', outSeconds < (endSeconds - earlyThreshold * 60));
+    if (workEnd) {
+        var endParts = workEnd.split(':');
+        var outParts = checkOut.split(':');
+        var endMinutes = parseInt(endParts[0], 10) * 60 + parseInt(endParts[1], 10);
+        var outMinutes = parseInt(outParts[0], 10) * 60 + parseInt(outParts[1], 10);
+        current.setValue('is_early_dept', outMinutes < (endMinutes - earlyThreshold));
+    }
 })(current, previous);
     ]]></script>
         <sys_class_name>sys_script</sys_class_name>

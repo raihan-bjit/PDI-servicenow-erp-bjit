@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Equipment" section_id="4b7f109a94794a458007793090bca6c1" sys_domain="global" table="x_2316161_bjit_e_0_ho_req" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-17 05:46:52</sys_created_on>
+            <sys_id>9b2d5b3a9aa842e7921156203bd51a06</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Equipment" display_value="Equipment" name="x_2316161_bjit_e_0_ho_req" sys_domain="global" view="Default view">4b7f109a94794a458007793090bca6c1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-17 05:46:52</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>equipment_needed</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-17 05:46:52</sys_created_on>
+            <sys_id>2de6677d0f6644c68429bc272b9520a3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Equipment" display_value="Equipment" name="x_2316161_bjit_e_0_ho_req" sys_domain="global" view="Default view">4b7f109a94794a458007793090bca6c1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-17 05:46:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>equipment_status</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-17 05:46:52</sys_created_on>
+            <sys_id>2f9f00a976c24164b275a1388cbef77f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Equipment" display_value="Equipment" name="x_2316161_bjit_e_0_ho_req" sys_domain="global" view="Default view">4b7f109a94794a458007793090bca6c1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-17 05:46:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-17 05:46:52</sys_created_on>
+            <sys_id>cdc6b8568dc040ed927947a82840dee4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Equipment" display_value="Equipment" name="x_2316161_bjit_e_0_ho_req" sys_domain="global" view="Default view">4b7f109a94794a458007793090bca6c1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-17 05:46:52</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>equipment_details</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-17 05:46:52</sys_created_on>
+            <sys_id>4f2c71b98fbe44c295008f486add5750</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Equipment" display_value="Equipment" name="x_2316161_bjit_e_0_ho_req" sys_domain="global" view="Default view">4b7f109a94794a458007793090bca6c1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-17 05:46:52</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-17 05:46:52</sys_created_on>
+            <sys_id>2382cf853f9842ee970ae42f05da44c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Equipment" display_value="Equipment" name="x_2316161_bjit_e_0_ho_req" sys_domain="global" view="Default view">4b7f109a94794a458007793090bca6c1</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-17 05:46:52</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Equipment</caption>
+            <header>false</header>
+            <name>x_2316161_bjit_e_0_ho_req</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-11-17 04:49:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4b7f109a94794a458007793090bca6c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_2316161_bjit_e_0_ho_req</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="BJIT Enterprise Resource Planning" source="x_2316161_bjit_e_0">2aaa6f4e932c13100a013a4efaba102c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="BJIT Enterprise Resource Planning">2aaa6f4e932c13100a013a4efaba102c</sys_scope>
+            <sys_update_name>sys_ui_section_4b7f109a94794a458007793090bca6c1</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-11-17 04:49:42</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -2,7 +2,7 @@
     <sys_security_acl action="INSERT_OR_UPDATE">
         <active>true</active>
         <admin_overrides>true</admin_overrides>
-        <advanced>false</advanced>
+        <advanced>true</advanced>
         <applies_to/>
         <condition/>
         <controlled_by_refs/>
@@ -11,7 +11,13 @@
         <local_or_existing>Existing</local_or_existing>
         <name>x_2316161_bjit_e_0_attend</name>
         <operation display_value="write">write</operation>
-        <script/>
+        <script><![CDATA[
+if (gs.hasRole('x_2316161_bjit_e_0.hr_admin') || gs.hasRole('x_2316161_bjit_e_0.erp_admin')) {
+    answer = true;
+} else {
+    answer = current.employee.user == gs.getUserID();
+}
+    ]]></script>
         <security_attribute/>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>admin</sys_created_by>
